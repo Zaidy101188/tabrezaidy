@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabrez Zaidy — Senior UX/UI Designer, healthcare & pharmacy commerce</title>
+<meta name="description" content="Senior UX/UI designer with 8+ years designing online pharmacy and healthcare commerce products. 41% lift in prescription conversions, 32% portfolio-wide e-commerce growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1F2E;
+  --ink-70:rgba(14,31,46,.70);
+  --ink-45:rgba(14,31,46,.45);
+  --ink-14:rgba(14,31,46,.14);
+  --ink-07:rgba(14,31,46,.07);
+  --paper:#EDF1F0;
+  --label:#FFFFFF;
+  --amber:#C0511A;
+  --amber-soft:#F2C79A;
+  --amber-wash:#FBEEE1;
+  --clinic:#14655C;
+
+  --display:"Archivo",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+  --wrap:1180px;
+  --gut:clamp(20px,5vw,56px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:clamp(17px,1.05vw,19px);line-height:1.62;
+  font-optical-sizing:auto;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+.section{padding-block:clamp(64px,8vw,116px)}
+.section--tight{padding-block:clamp(44px,5vw,72px)}
+
+/* ---------- shared type ---------- */
+.eyebrow{
+  font-family:var(--mono);font-size:11px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-45);
+  margin:0 0 18px;
+}
+.eyebrow b{color:var(--amber);font-weight:500}
+.h2{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(30px,4.2vw,52px);line-height:1.02;letter-spacing:-.022em;
+  margin:0 0 14px;text-wrap:balance;
+}
+.lede{font-size:clamp(18px,1.4vw,21px);color:var(--ink-70);max-width:56ch;margin:0}
+.rule{height:1px;background:var(--ink-14);border:0;margin:0}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(237,241,240,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--ink-14);
+}
+.nav-in{display:flex;align-items:center;gap:24px;height:62px}
+.mark{
+  font-family:var(--display);font-weight:900;font-size:14px;letter-spacing:.02em;
+  background:var(--ink);color:var(--paper);
+  width:30px;height:30px;display:grid;place-items:center;flex:none;
+  text-decoration:none;
+}
+.nav-name{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-right:auto}
+.nav-links{display:flex;gap:22px}
+.nav-links a{
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink-70);padding-block:4px;
+  border-bottom:1px solid transparent;transition:color .18s,border-color .18s;
+}
+.nav-links a:hover{color:var(--amber);border-bottom-color:var(--amber)}
+@media(max-width:760px){.nav-links{display:none}.nav-name{font-size:11px}}
+
+/* ---------- hero: dispensing label ---------- */
+.hero{padding-block:clamp(36px,5vw,72px) clamp(56px,7vw,96px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 246px;gap:clamp(20px,3vw,40px);align-items:start}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+.label{
+  background:var(--label);
+  border:1px solid var(--ink-14);
+  box-shadow:0 1px 0 var(--ink-07),0 26px 60px -46px rgba(14,31,46,.55);
+  overflow:hidden;position:relative;
+}
+.label-top{
+  display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;
+  background:var(--ink);color:#D9E2E0;
+  padding:9px clamp(18px,2.4vw,30px);
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+}
+.label-top .lot{color:var(--amber-soft)}
+.label-body{padding:clamp(24px,3.2vw,42px) clamp(18px,2.4vw,30px) clamp(22px,2.6vw,32px)}
+
+.name{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(42px,8.4vw,104px);line-height:.88;letter-spacing:-.038em;
+  margin:0;text-transform:uppercase;
+}
+.name .surname{display:block;color:var(--amber)}
+.role{
+  font-family:var(--mono);font-size:clamp(11px,1.1vw,13px);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-70);margin:16px 0 0;
+}
+.label-rule{height:3px;background:var(--ink);margin:22px 0 0}
+.label-rule.thin{height:1px;background:var(--ink-14);margin:0}
+
+.rx-rows{margin:0}
+.rx-row{
+  display:grid;grid-template-columns:112px minmax(0,1fr);gap:clamp(12px,2vw,28px);
+  padding:15px 0;border-bottom:1px solid var(--ink-14);
+}
+.rx-row:last-child{border-bottom:0}
+.rx-key{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-45);padding-top:5px;
+}
+.rx-val{margin:0;font-size:clamp(16px,1.15vw,18.5px);color:var(--ink);max-width:60ch}
+.rx-val em{font-style:italic;color:var(--amber)}
+@media(max-width:560px){
+  .rx-row{grid-template-columns:1fr;gap:4px}
+  .rx-key{padding-top:0}
+}
+
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{
+  font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;padding:13px 22px;border:1px solid var(--ink);
+  transition:background .18s,color .18s,transform .18s;
+}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:var(--amber);border-color:var(--amber);transform:translateY(-2px)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+
+/* sticker */
+.aside{display:flex;flex-direction:column;gap:16px;padding-top:6px}
+.sticker{
+  background:var(--amber-wash);border:1px solid var(--amber-soft);
+  border-left:5px solid var(--amber);
+  padding:18px 20px;transform:rotate(-1.6deg);
+}
+.sticker p{margin:0;font-family:var(--display);font-weight:700;font-size:15px;line-height:1.28;letter-spacing:-.005em;text-transform:uppercase}
+.sticker .warn{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+  color:var(--amber);margin-bottom:8px;font-weight:500;
+}
+.facts{border:1px solid var(--ink-14);background:var(--label);padding:18px 20px}
+.facts dt{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-45)}
+.facts dd{margin:3px 0 14px;font-size:15.5px;line-height:1.4}
+.facts dd:last-child{margin-bottom:0}
+.facts a{color:var(--ink);text-decoration-color:var(--amber-soft);text-underline-offset:3px}
+.facts a:hover{color:var(--amber)}
+
+/* ---------- outcomes ---------- */
+.outcomes{background:var(--ink);color:#DDE5E3}
+.outcomes .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,44px)}
+@media(max-width:820px){.outcomes .wrap{grid-template-columns:repeat(2,1fr);gap:30px}}
+.stat .n{
+  font-family:var(--display);font-weight:800;font-size:clamp(38px,5.2vw,62px);
+  line-height:1;letter-spacing:-.03em;color:#fff;display:block;
+}
+.stat .n span{color:var(--amber-soft)}
+.stat p{margin:10px 0 0;font-size:15.5px;line-height:1.45;color:rgba(221,229,227,.72);max-width:24ch}
+
+/* ---------- work ---------- */
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:clamp(30px,4vw,52px)}
+.case{
+  border-top:1px solid var(--ink-14);
+  display:grid;grid-template-columns:96px minmax(0,1fr) minmax(0,.82fr);
+  gap:clamp(16px,3vw,44px);padding-block:clamp(28px,3.4vw,44px);
+  text-decoration:none;color:inherit;transition:background .2s;
+}
+.case:hover{background:var(--ink-07)}
+.case:hover h3{color:var(--amber)}
+.case:last-of-type{border-bottom:1px solid var(--ink-14)}
+.case-link{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--amber);margin:0 !important;
+}
+@media(max-width:900px){
+  .case{grid-template-columns:1fr;gap:14px;}
+}
+.case-dose{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);padding-top:8px;
+}
+.case-dose i{display:block;font-style:normal;color:var(--ink-45);margin-top:6px}
+.case h3{
+  font-family:var(--display);font-weight:800;font-size:clamp(23px,2.5vw,33px);
+  line-height:1.1;letter-spacing:-.02em;margin:0 0 10px;text-wrap:balance;
+}
+.case p{margin:0 0 14px;color:var(--ink-70)}
+.case p:last-child{margin-bottom:0}
+.case-side{padding-top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.tags li{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--ink-14);padding:5px 9px;color:var(--ink-70);background:var(--label);
+}
+.result{
+  border-left:3px solid var(--amber);padding:4px 0 4px 16px;margin:0 0 16px;
+}
+.result b{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em;display:block}
+.result span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-45)}
+.wip{
+  display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--clinic);color:#fff;padding:4px 8px;margin-bottom:12px;
+}
+
+/* ---------- papers ---------- */
+.papers{background:var(--label);border-block:1px solid var(--ink-14)}
+.paper-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+@media(max-width:820px){.paper-list{grid-template-columns:1fr}}
+.paper{border-top:1px solid var(--ink-14);padding:26px clamp(0px,2vw,28px) 26px 0}
+.paper h3{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.25;margin:0 0 8px;letter-spacing:-.01em}
+.paper p{margin:0;font-size:16px;color:var(--ink-70)}
+.paper .sector{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:9px}
+
+
+/* ---------- gallery ---------- */
+.gallery-sec{background:var(--label);border-block:1px solid var(--ink-14)}
+.g-feature{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,24px);margin-bottom:clamp(14px,2vw,24px)}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px)}
+@media(max-width:900px){.g-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g-feature{grid-template-columns:1fr}.g-grid{grid-template-columns:1fr}}
+.tile{
+  display:block;text-decoration:none;color:inherit;background:var(--paper);
+  border:1px solid var(--ink-14);overflow:hidden;
+  transition:border-color .2s,transform .25s,box-shadow .25s;
+}
+.tile:hover{border-color:var(--amber);transform:translateY(-3px);box-shadow:0 18px 34px -28px rgba(14,31,46,.6)}
+.tile .shot{aspect-ratio:4/3;overflow:hidden;background:var(--ink-07);border-bottom:1px solid var(--ink-14)}
+.tile--big .shot{aspect-ratio:16/9}
+.tile .shot svg{width:100%;height:100%;display:block;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+.tile:hover .shot svg{transform:scale(1.035)}
+.tile .cap{padding:14px 16px 16px}
+.tile .kind{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);display:block;margin-bottom:6px;
+}
+.tile h3{font-family:var(--display);font-weight:700;font-size:15.5px;line-height:1.25;letter-spacing:-.01em;margin:0}
+.tile--big h3{font-size:clamp(17px,1.7vw,22px)}
+.tile--big .cap{padding:18px 20px 20px}
+.g-note{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-45);
+  margin:clamp(18px,2.4vw,28px) 0 0;
+}
+.g-note a{color:var(--amber);text-underline-offset:3px}
+
+/* ---------- capabilities ---------- */
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px)}
+@media(max-width:860px){.cap-grid{grid-template-columns:1fr}}
+.cap h3{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em;margin:0 0 12px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.cap ul{list-style:none;margin:0;padding:0}
+.cap li{font-size:16.5px;padding:7px 0;border-bottom:1px solid var(--ink-07);color:var(--ink-70)}
+
+/* ---------- practice / bio ---------- */
+.bio-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,72px);align-items:start}
+@media(max-width:900px){.bio-grid{grid-template-columns:1fr}}
+.bio p{color:var(--ink-70);margin:0 0 18px;font-size:clamp(17px,1.2vw,19.5px)}
+.bio p:last-child{margin-bottom:0}
+.bio strong{color:var(--ink);font-weight:600}
+.meta{border:1px solid var(--ink-14);background:var(--label);padding:clamp(20px,2.4vw,28px)}
+.meta h3{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-45);margin:0 0 14px;font-weight:500}
+.meta-row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--ink-07);font-size:16px}
+.meta-row:last-of-type{border-bottom:0}
+.meta-row span:last-child{font-family:var(--mono);font-size:12.5px;color:var(--ink-45);text-align:right;letter-spacing:.03em}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);color:#DDE5E3}
+.contact .h2{color:#fff}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(30px,5vw,72px);align-items:end}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr;align-items:start}}
+.contact p.lede{color:rgba(221,229,227,.72)}
+.contact-list{list-style:none;margin:0;padding:0}
+.contact-list li{border-top:1px solid rgba(221,229,227,.18);padding:14px 0;display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.contact-list .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(221,229,227,.5)}
+.contact-list a,.contact-list span.v{color:#fff;text-decoration:none;font-size:17px;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.contact-list a:hover{color:var(--amber-soft);border-bottom-color:var(--amber-soft)}
+.foot{border-top:1px solid rgba(221,229,227,.18);margin-top:clamp(40px,6vw,72px);padding-top:20px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+.foot p{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(221,229,227,.45)}
+
+/* ---------- motion ---------- */
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.print > *{opacity:0;animation:print .55s cubic-bezier(.22,.61,.36,1) forwards}
+.print > *:nth-child(1){animation-delay:.05s}
+.print > *:nth-child(2){animation-delay:.13s}
+.print > *:nth-child(3){animation-delay:.21s}
+.print > *:nth-child(4){animation-delay:.29s}
+.print > *:nth-child(5){animation-delay:.37s}
+.print > *:nth-child(6){animation-delay:.45s}
+@keyframes print{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:var(--gut);top:10px;z-index:99;background:var(--ink);color:#fff;padding:10px 16px;font-family:var(--mono);font-size:12px}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  .reveal{opacity:1;transform:none}
+  .print > *{opacity:1;animation:none}
+  .sticker{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="mark" href="#top" aria-label="Tabrez Zaidy, top of page">TZ</a>
+    <span class="nav-name">Tabrez Zaidy — Senior UX/UI Designer</span>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#papers">White papers</a>
+      <a href="#practice">Practice</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+
+    <div class="label">
+      <div class="label-top">
+        <span>True North Management · Vancouver, BC</span>
+        <span class="lot">2017 — Present</span>
+      </div>
+      <div class="label-body print">
+        <h1 class="name">Tabrez<span class="surname">Zaidy</span></h1>
+        <p class="role">Senior UX/UI Designer · Product Design · Design Strategy</p>
+        <div class="label-rule"></div>
+        <div class="rx-rows">
+          <div class="rx-row">
+            <div class="rx-key">Directions</div>
+            <p class="rx-val">Designs regulated healthcare commerce end to end — research and information architecture through prototyping, design systems, and developer handoff. <em>Ships against a conversion number, not a mood board.</em></p>
+          </div>
+          <div class="rx-row">
+            <div class="rx-key">Quantity</div>
+            <p class="rx-val">8+ years · 10+ online pharmacy brands · 12+ enterprise white papers</p>
+          </div>
+          <div class="rx-row">
+            <div class="rx-key">Refills</div>
+            <p class="rx-val">Open to senior product design and design lead roles — remote, or on the ground in Mumbai.</p>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="Tabrez_Zaidy_Resume.pdf" download>Download resume</a>
+        </div>
+      </div>
+    </div>
+
+    <aside class="aside">
+      <div class="sticker">
+        <p><span class="warn">⚠ Side effects may include</span>A 41% rise in prescription conversions.</p>
+      </div>
+      <dl class="facts">
+        <dt>Based in</dt>
+        <dd>Mumbai, India · works remote with North America</dd>
+        <dt>Sectors</dt>
+        <dd>Online pharmacy, healthcare, e-commerce, B2B SaaS</dd>
+        <dt>Elsewhere</dt>
+        <dd>
+          <a href="https://www.linkedin.com/in/tabrezzaidy" target="_blank" rel="noopener">LinkedIn</a>
+        </dd>
+      </dl>
+    </aside>
+
+  </div>
+</header>
+
+<section class="outcomes section--tight">
+  <div class="wrap">
+    <div class="stat reveal">
+      <span class="n" data-count="41" data-suffix="%">41<span>%</span></span>
+      <p>More prescription conversions after the Upload Prescription redesign</p>
+    </div>
+    <div class="stat reveal">
+      <span class="n" data-count="32" data-suffix="%">32<span>%</span></span>
+      <p>Portfolio-wide e-commerce conversion growth across 10+ pharmacy sites</p>
+    </div>
+    <div class="stat reveal">
+      <span class="n" data-count="10" data-suffix="+">10<span>+</span></span>
+      <p>Pharmacy brands running on one shared Figma design system</p>
+    </div>
+    <div class="stat reveal">
+      <span class="n" data-count="8" data-suffix=" yrs">8<span> yrs</span></span>
+      <p>Designing in regulated, trust-sensitive healthcare commerce</p>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Selected work — <b>five projects</b></p>
+        <h2 class="h2">Work that moved a number</h2>
+      </div>
+      <p class="lede">Pharmacy customers arrive anxious, price-sensitive, and often on a phone. Every project below started by finding where that person gave up. Most recent first.</p>
+    </div>
+
+    <a class="case reveal" href="case-studies/rx-price-comparison.html">
+      <div class="case-dose">01 · 2026<i>Product · in progress</i></div>
+      <div>
+        <span class="wip">Currently building</span>
+        <h3>A price-comparison tool for people paying out of pocket</h3>
+        <p>Americans on high-deductible plans have no straightforward way to see what a medication actually costs them — copay tier, coinsurance, cash price, and the Canadian price all live in different places. I'm designing a comparison widget over a structured dataset of around 21 common drugs that puts those four numbers side by side in one view.</p>
+        <p>Paired with editorial coverage of prescription pricing and financial assistance, with art-directed photography commissioned for the launch post.</p>
+        <p class="case-link">View full case study &rarr;</p>
+      </div>
+      <div class="case-side">
+        <div class="result"><b>~21 drugs</b><span>Structured pricing dataset</span></div>
+        <ul class="tags"><li>Product design</li><li>Data modelling</li><li>Editorial design</li><li>Art direction</li></ul>
+      </div>
+    </a>
+
+    <a class="case reveal" href="case-studies/design-system.html">
+      <div class="case-dose">02 · Ongoing<i>Design systems</i></div>
+      <div>
+        <h3>One Figma system, ten brands, one set of decisions</h3>
+        <p>Ten client brands meant ten versions of every button, form, and drug card — and ten chances to get an accessibility detail wrong. I built a themeable component library in Figma where structure and behaviour are shared and only colour, type, and logo change per brand.</p>
+        <p>Design time per project dropped, handoff stopped being a translation exercise, and accessibility fixes now ship once instead of ten times.</p>
+        <p class="case-link">View full case study &rarr;</p>
+      </div>
+      <div class="case-side">
+        <div class="result"><b>Adopted by 10+ brands</b><span>Shared component library</span></div>
+        <ul class="tags"><li>Design tokens</li><li>Component library</li><li>Documentation</li><li>Dev handoff</li></ul>
+      </div>
+    </a>
+
+    <a class="case reveal" href="case-studies/pharmacy-replatform.html">
+      <div class="case-dose">03 · 2018—2024<i>Platform redesign</i></div>
+      <div>
+        <h3>Replatforming ten pharmacy storefronts off legacy .NET</h3>
+        <p>A portfolio of ageing .NET sites was slow, inconsistent, and hard to trust — a real problem when someone is deciding whether to send you their medical details. I led the end-to-end redesign onto WordPress: restructured the drug catalogue and search so people could find a medication by brand, generic, or condition, rebuilt checkout around visible trust signals, and brought every template to WCAG 2.1 AA.</p>
+        <p>Ran it as designer and project manager across concurrent client timelines, with sprint planning, design reviews, and retrospectives alongside developers and marketers.</p>
+        <p class="case-link">View full case study &rarr;</p>
+      </div>
+      <div class="case-side">
+        <div class="result"><b>+32% conversions</b><span>Portfolio-wide</span></div>
+        <ul class="tags"><li>IA</li><li>Responsive design</li><li>Checkout UX</li><li>WCAG 2.1</li><li>Agile delivery</li></ul>
+      </div>
+    </a>
+
+    <a class="case reveal" href="case-studies/product-cards.html">
+      <div class="case-dose">04 · 2022<i>Growth design</i></div>
+      <div>
+        <h3>Product cards that turned health articles into a sales channel</h3>
+        <p>Editorial traffic was large and completely unmonetised — people researching a condition never met the medication that treated it. I designed a contextual product card that sits inside the article body, matching the tone of the content rather than interrupting it: plain drug name, strength, price, and a single honest action.</p>
+        <p>The pattern opened a mid-funnel touchpoint that hadn't existed before and now generates incremental revenue across the whole pharmacy portfolio.</p>
+        <p class="case-link">View full case study &rarr;</p>
+      </div>
+      <div class="case-side">
+        <div class="result"><b>New revenue line</b><span>From editorial traffic</span></div>
+        <ul class="tags"><li>Component design</li><li>Content strategy</li><li>CRO</li></ul>
+      </div>
+    </a>
+
+    <a class="case reveal" href="case-studies/upload-prescription.html">
+      <div class="case-dose">05 · 2021<i>Feature design</i></div>
+      <div>
+        <h3>Upload Prescription: removing the step that ended the order</h3>
+        <p>Customers with a valid paper prescription had no obvious way to hand it over, so they abandoned the cart and phoned the call centre — or didn't come back at all. I mapped the full journey from drug page to fulfilment, interviewed support staff about the calls they fielded daily, and rebuilt the handoff as a single guided upload with clear file guidance, progress feedback, and a plain explanation of what happens next.</p>
+        <p>Carried it from research and flow mapping through high-fidelity prototypes, developer handoff, and QA on live traffic.</p>
+        <p class="case-link">View full case study &rarr;</p>
+      </div>
+      <div class="case-side">
+        <div class="result"><b>+41% conversions</b><span>Prescription orders</span></div>
+        <ul class="tags"><li>UX research</li><li>User flows</li><li>Prototyping</li><li>QA</li></ul>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<section class="section gallery-sec" id="gallery">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Gallery — <b>ten additional projects</b></p>
+        <h2 class="h2">Interfaces, identities, and information design</h2>
+      </div>
+      <p class="lede">Ten additional projects spanning product UI, brand work, and data visualisation. Every tile opens its own case study.</p>
+    </div>
+
+    <div class="g-feature">
+      <a class="tile tile--big reveal" href="case-studies/redesign-enhanced-ux.html">
+        <div class="shot"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="480" height="270" fill="#EDF1F0"/>
+    <line x1="0" y1="135.0" x2="480" y2="135.0" stroke="#D9DFDD" stroke-width="1"/>
+    <g stroke="#0E1F2E" stroke-width="2.4" fill="none">
+      <rect x="46" y="105.0" width="92" height="60" rx="2"/>
+      <rect x="194.0" y="89.0" width="92" height="92" rx="2"/>
+      <rect x="342" y="105.0" width="92" height="60" rx="2"/>
+    </g>
+    <line x1="138" y1="135.0" x2="194.0" y2="135.0" stroke="#0E1F2E" stroke-width="2"/>
+    <line x1="286.0" y1="135.0" x2="342" y2="135.0" stroke="#C0511A" stroke-width="3"/>
+    <polygon points="342,129.0 342,141.0 352,135.0" fill="#C0511A"/>
+    <g fill="#7A8B93">
+      <rect x="58" y="119.0" width="60" height="6" rx="1"/>
+      <rect x="58" y="133.0" width="40" height="6" rx="1"/>
+    </g>
+    <g fill="#7A8B93">
+      <rect x="210.0" y="109.0" width="60" height="6" rx="1"/>
+      <rect x="210.0" y="125.0" width="60" height="6" rx="1"/>
+      <rect x="210.0" y="141.0" width="36" height="6" rx="1"/>
+    </g>
+    <circle cx="388" cy="135.0" r="10" fill="#F2C79A" stroke="#C0511A" stroke-width="2.4"/>
+    </svg></div>
+        <div class="cap"><span class="kind">UX case study</span><h3>Redesigning for enhanced user experience</h3></div>
+      </a>
+      <a class="tile tile--big reveal" href="case-studies/medication-delivery-dashboard.html">
+        <div class="shot"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="480" height="270" fill="#EDF1F0"/>
+    <rect x="40" y="40" width="400" height="190" rx="4" fill="#fff" stroke="#D9DFDD" stroke-width="1.4"/>
+    <rect x="40" y="40" width="400" height="30" rx="4" fill="#0E1F2E"/>
+    <circle cx="58" cy="55" r="4" fill="#F2C79A"/>
+    <rect x="72" y="51" width="70" height="8" rx="2" fill="#3A4B57"/>
+    <rect x="60" y="90" width="128" height="70" rx="3" fill="#14655C" opacity=".1"/>
+    <rect x="60" y="90" width="128" height="70" rx="3" fill="none" stroke="#14655C" stroke-width="1.6"/>
+    <rect x="74" y="104" width="58" height="7" rx="2" fill="#14655C"/>
+    <text x="74" y="140" font-family="monospace" font-size="22" fill="#0E1F2E" font-weight="700">Rx</text>
+    <rect x="74" y="146" width="70" height="5" rx="1.5" fill="#7A8B93"/>
+    <rect x="290" y="179.9" width="16" height="34.1" fill="#D9DFDD"/><rect x="316" y="162.3" width="16" height="51.7" fill="#D9DFDD"/><rect x="342" y="186.5" width="16" height="27.500000000000004" fill="#D9DFDD"/><rect x="368" y="153.5" width="16" height="60.50000000000001" fill="#C0511A"/><rect x="394" y="172.2" width="16" height="41.800000000000004" fill="#D9DFDD"/>
+    <line x1="276" y1="214" x2="432" y2="214" stroke="#D9DFDD" stroke-width="1.4"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Healthcare product UI</span><h3>Medication delivery dashboard</h3></div>
+      </a>
+    </div>
+
+    <div class="g-grid">
+      <a class="tile reveal" href="case-studies/android-app-mockup.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/>
+    <rect x="144.0" y="30" width="112" height="240" rx="16" fill="#fff" stroke="#0E1F2E" stroke-width="2.6"/>
+    <rect x="154.0" y="46" width="92" height="20" rx="3" fill="#0E1F2E"/>
+    <rect x="160.0" y="52" width="30" height="8" rx="2" fill="#F2C79A"/>
+    <rect x="154.0" y="76" width="92" height="22" rx="3" fill="none" stroke="#D9DFDD" stroke-width="1.6"/><circle cx="166.0" cy="87" r="6" fill="#C0511A"/><rect x="178.0" y="84" width="42" height="6" rx="1.5" fill="#7A8B93"/><rect x="154.0" y="106" width="92" height="22" rx="3" fill="none" stroke="#D9DFDD" stroke-width="1.6"/><circle cx="166.0" cy="117" r="6" fill="#14655C"/><rect x="178.0" y="114" width="42" height="6" rx="1.5" fill="#7A8B93"/><rect x="154.0" y="136" width="92" height="22" rx="3" fill="none" stroke="#D9DFDD" stroke-width="1.6"/><circle cx="166.0" cy="147" r="6" fill="#7A8B93"/><rect x="178.0" y="144" width="42" height="6" rx="1.5" fill="#7A8B93"/><rect x="154.0" y="166" width="92" height="22" rx="3" fill="none" stroke="#D9DFDD" stroke-width="1.6"/><circle cx="166.0" cy="177" r="6" fill="#C0511A"/><rect x="178.0" y="174" width="42" height="6" rx="1.5" fill="#7A8B93"/><rect x="154.0" y="196" width="92" height="22" rx="3" fill="none" stroke="#D9DFDD" stroke-width="1.6"/><circle cx="166.0" cy="207" r="6" fill="#14655C"/><rect x="178.0" y="204" width="42" height="6" rx="1.5" fill="#7A8B93"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Mobile product</span><h3>Android app mockup &amp; prototype</h3></div>
+      </a>
+      <a class="tile reveal" href="case-studies/adobe-xd-projects.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/>
+    <g stroke="#0E1F2E" stroke-width="2" fill="#fff">
+      <rect x="60" y="46" width="120" height="160" rx="2"/>
+      <rect x="150" y="80" width="150" height="120" rx="2" fill="#EDF1F0" stroke="#0E1F2E"/>
+    </g>
+    <g fill="#D9DFDD">
+      <rect x="76" y="64" width="88" height="10"/>
+      <rect x="76" y="82" width="60" height="7"/>
+      <rect x="76" y="96" width="88" height="46" fill="#F2C79A"/>
+      <rect x="76" y="150" width="88" height="7"/>
+      <rect x="76" y="164" width="60" height="7"/>
+    </g>
+    <g fill="#7A8B93">
+      <rect x="166" y="96" width="118" height="8"/>
+      <rect x="166" y="112" width="80" height="8"/>
+      <rect x="166" y="132" width="118" height="52" fill="#14655C" opacity=".18"/>
+    </g>
+    <circle cx="270" cy="60" r="9" fill="none" stroke="#C0511A" stroke-width="2.4"/>
+    <path d="M270 51 v18 M261 60 h18" stroke="#C0511A" stroke-width="2"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Interface design</span><h3>Projects in Adobe XD</h3></div>
+      </a>
+      <a class="tile reveal" href="case-studies/knutekids.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/>
+    <circle cx="200.0" cy="140.0" r="52" fill="#F2C79A"/>
+    <circle cx="180.0" cy="126.0" r="7" fill="#0E1F2E"/>
+    <circle cx="220.0" cy="126.0" r="7" fill="#0E1F2E"/>
+    <path d="M 178.0 156.0 Q 200.0 176.0 222.0 156.0" stroke="#0E1F2E" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 130.0 92.0 q 14 -22 30 -6" stroke="#14655C" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 270.0 92.0 q -14 -22 -30 -6" stroke="#14655C" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="108.0" cy="220.0" r="5" fill="#C0511A"/>
+    <circle cx="296.0" cy="206.0" r="7" fill="#14655C"/>
+    <circle cx="260.0" cy="236.0" r="4" fill="#D9DFDD"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Brand &amp; web</span><h3>KnuteKids</h3></div>
+      </a>
+      <a class="tile reveal" href="case-studies/eliash-elph.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/>
+    <circle cx="200.0" cy="150.0" r="70" fill="none" stroke="#0E1F2E" stroke-width="2"/>
+    <text x="200.0" y="176.0" font-family="Georgia,serif" font-size="72" fill="#0E1F2E" text-anchor="middle" font-style="italic">E</text>
+    <line x1="130.0" y1="150.0" x2="270.0" y2="150.0" stroke="#C0511A" stroke-width="1.4"/>
+    <circle cx="200.0" cy="80.0" r="3" fill="#C0511A"/>
+    <circle cx="200.0" cy="220.0" r="3" fill="#C0511A"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Brand &amp; web</span><h3>Eliash Elph</h3></div>
+      </a>
+      <a class="tile reveal" href="case-studies/infographics.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/>
+    <g fill="none" stroke="#0E1F2E" stroke-width="2">
+      <circle cx="140" cy="150" r="62"/>
+    </g>
+    <path d="M140 88 A62 62 0 0 1 195 178 L140 150 Z" fill="#C0511A"/>
+    <path d="M195 178 A62 62 0 0 1 100 195 L140 150 Z" fill="#14655C" opacity=".7"/>
+    <path d="M100 195 A62 62 0 0 1 140 88 L140 150 Z" fill="#F2C79A"/>
+    <rect x="240" y="160" width="14" height="60" fill="#0E1F2E"/><rect x="262" y="120" width="14" height="100" fill="#C0511A"/><rect x="284" y="148" width="14" height="72" fill="#14655C"/><rect x="306" y="100" width="14" height="120" fill="#7A8B93"/><rect x="328" y="134" width="14" height="86" fill="#0E1F2E"/>
+    <line x1="230" y1="220" x2="350" y2="220" stroke="#D9DFDD" stroke-width="1.4"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Data visualisation</span><h3>Infographics</h3></div>
+      </a>
+      <a class="tile reveal" href="case-studies/logo-design.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/>
+    <g stroke="#D9DFDD" stroke-width="1">
+      <circle cx="200.0" cy="150.0" r="80" fill="none"/>
+      <line x1="120.0" y1="150.0" x2="280.0" y2="150.0"/>
+      <line x1="200.0" y1="70.0" x2="200.0" y2="230.0"/>
+    </g>
+    <polygon points="200.0,100.0 243.0,125.0 243.0,175.0 200.0,200.0 157.0,175.0 157.0,125.0" fill="none" stroke="#0E1F2E" stroke-width="2.6"/>
+    <circle cx="200.0" cy="150.0" r="18" fill="#C0511A"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Identity</span><h3>Logo design</h3></div>
+      </a>
+      <a class="tile reveal" href="case-studies/social-media-images.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/><rect x="78.0" y="28.0" width="76" height="76" rx="3" fill="#F2C79A" opacity=".85"/><rect x="162.0" y="28.0" width="76" height="76" rx="3" fill="#D9DFDD" opacity=".22"/><rect x="246.0" y="28.0" width="76" height="76" rx="3" fill="#14655C" opacity=".85"/><rect x="78.0" y="112.0" width="76" height="76" rx="3" fill="#0E1F2E" opacity="1"/><rect x="162.0" y="112.0" width="76" height="76" rx="3" fill="#C0511A" opacity=".85"/><rect x="246.0" y="112.0" width="76" height="76" rx="3" fill="#D9DFDD" opacity=".22"/><rect x="78.0" y="196.0" width="76" height="76" rx="3" fill="#D9DFDD" opacity=".22"/><rect x="162.0" y="196.0" width="76" height="76" rx="3" fill="#F2C79A" opacity=".85"/><rect x="246.0" y="196.0" width="76" height="76" rx="3" fill="#14655C" opacity=".85"/></svg></div>
+        <div class="cap"><span class="kind">Campaign design</span><h3>Social media images</h3></div>
+      </a>
+      <a class="tile reveal" href="case-studies/just-for-fun.html">
+        <div class="shot"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true"><rect width="400" height="300" fill="#EDF1F0"/>
+    <path d="M40 200 C 90 90, 150 260, 200 140 S 300 60, 360 170" fill="none" stroke="#C0511A" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="40" cy="200" r="6" fill="#0E1F2E"/>
+    <circle cx="360" cy="170" r="6" fill="#0E1F2E"/>
+    <path d="M120 230 q 20 -18 40 0" stroke="#14655C" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M250 240 q 20 -18 40 0" stroke="#14655C" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg></div>
+        <div class="cap"><span class="kind">Experiment</span><h3>Just for fun?</h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section papers" id="papers">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Publication design — <b>12+ titles</b></p>
+        <h2 class="h2">Making dense technical arguments readable</h2>
+      </div>
+      <p class="lede">Enterprise white papers for security, data centre, and networking clients: typography, diagrams, and data visualisation built to survive a busy IT buyer skimming on page three.</p>
+    </div>
+    <ul class="paper-list">
+      <li class="paper reveal">
+        <span class="sector">Cloud security</span>
+        <h3>Maximizing Enterprise Security Systems in the Cloud</h3>
+        <p>Visual design, layout, and infographics for a technical audience of enterprise IT decision-makers.</p>
+      </li>
+      <li class="paper reveal">
+        <span class="sector">Physical access control</span>
+        <h3>System Design Considerations to Optimize Physical Access Control</h3>
+        <p>A B2B publication translating system architecture into clear diagrams, typographic hierarchy, and data visualisation.</p>
+      </li>
+      <li class="paper reveal">
+        <span class="sector">Data centre</span>
+        <h3>The Hidden Energy Drain: Increasing Fan Efficiency in Data Center Cooling</h3>
+        <p>Engineering content given an accessible visual treatment for a data centre hardware client.</p>
+      </li>
+      <li class="paper reveal">
+        <span class="sector">Networking</span>
+        <h3>Combining Security and Networking Technologies for Unified Solutions</h3>
+        <p>A multi-page publication bridging two product lines into one coherent positioning story.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="practice">
+  <div class="wrap">
+    <div class="bio-grid">
+      <div class="bio">
+        <p class="eyebrow">Practice</p>
+        <h2 class="h2">Design that has to earn its keep</h2>
+        <p>I've spent eight years in a corner of e-commerce where the stakes are unusually personal. Someone ordering medication is managing a condition, a budget, and a fair amount of doubt about whether the site in front of them is legitimate. <strong>Clarity isn't an aesthetic preference in that context — it's the product.</strong></p>
+        <p>My work runs the full width of the process: interviews and heuristic evaluations to find the friction, information architecture and flows to remove it, high-fidelity prototypes to prove it, and a maintained design system so the fix holds. I sit close to developers and marketers throughout, because a design that can't be built on schedule isn't a design yet.</p>
+        <p>Alongside product work I design enterprise publications — white papers, marketing collateral, brand assets — which keeps the typographic muscle strong and pays off directly in editorial and content-led commerce.</p>
+      </div>
+      <div class="meta">
+        <h3>Details</h3>
+        <div class="meta-row"><span>Senior UX/UI Designer &amp; Project Manager</span><span>True North Management, 2017—now</span></div>
+        <div class="meta-row"><span>Certification in Web Design</span><span>Arena Animation</span></div>
+        <div class="meta-row"><span>HSC, Commerce</span><span>Mumbai, 1999</span></div>
+        <div class="meta-row"><span>Languages</span><span>English · Hindi · Urdu</span></div>
+      </div>
+    </div>
+
+    <div class="cap-grid" style="margin-top:clamp(40px,5vw,72px)">
+      <div class="cap reveal">
+        <h3>Product &amp; UX</h3>
+        <ul>
+          <li>UX research &amp; usability testing</li>
+          <li>Information architecture</li>
+          <li>User flow mapping</li>
+          <li>Interaction design</li>
+          <li>Wireframing &amp; prototyping</li>
+          <li>Conversion rate optimisation</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <h3>Systems &amp; craft</h3>
+        <ul>
+          <li>Design systems &amp; component libraries</li>
+          <li>Responsive web design</li>
+          <li>Accessibility (WCAG 2.1)</li>
+          <li>Visual design &amp; brand identity</li>
+          <li>Publication &amp; white paper design</li>
+          <li>Motion graphics</li>
+        </ul>
+      </div>
+      <div class="cap reveal">
+        <h3>Tools</h3>
+        <ul>
+          <li>Figma · Adobe XD</li>
+          <li>Photoshop · Illustrator · InDesign</li>
+          <li>After Effects · Premiere Pro</li>
+          <li>WordPress · HTML · CSS</li>
+          <li>Hotjar · Google Analytics</li>
+          <li>Jira · Slack</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 class="h2">Tell me what's not converting.</h2>
+        <p class="lede">Happy to talk through a product problem, a design system that's drifting, or a role you're hiring for. I reply to everything.</p>
+      </div>
+      <ul class="contact-list">
+        <li><span class="k">Email</span><a href="mailto:tabrez.zaidy@gmail.com">tabrez.zaidy@gmail.com</a></li>
+        <li><span class="k">Phone</span><a href="tel:+919821205694">+91 982 120 5694</a></li>
+        <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/tabrezzaidy" target="_blank" rel="noopener">/in/tabrezzaidy</a></li>
+        <li><span class="k">Résumé</span><a href="Tabrez_Zaidy_Resume.pdf" download>Download PDF (2 pages)</a></li>
+        <li><span class="k">Located</span><span class="v">Mumbai, India</span></li>
+      </ul>
+    </div>
+    <div class="foot">
+      <p>Tabrez Zaidy · Senior UX/UI Designer</p>
+      <p>Set in Archivo, Newsreader &amp; IBM Plex Mono</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealables = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    revealables.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px', threshold:.12});
+    revealables.forEach(function(el, i){
+      el.style.transitionDelay = (Math.min(i,4)*60) + 'ms';
+      ro.observe(el);
+    });
+  }
+
+  // count-up on the outcome figures
+  var nums = document.querySelectorAll('.n[data-count]');
+  if(!reduce && 'IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el = e.target, target = parseInt(el.dataset.count,10), suffix = el.dataset.suffix || '';
+        var t0 = null, dur = 900;
+        function step(ts){
+          if(!t0) t0 = ts;
+          var p = Math.min((ts - t0)/dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.innerHTML = Math.round(target*eased) + '<span>' + suffix + '</span>';
+          if(p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        co.unobserve(el);
+      });
+    },{threshold:.6});
+    nums.forEach(function(el){ co.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

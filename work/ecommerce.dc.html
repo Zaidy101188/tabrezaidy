@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>A Discovery-First E-commerce Experience — Tabrez Zaidy</title>
+<meta name="description" content="Case study: navigation, search, filtering, comparison and checkout rebuilt so a large catalogue can be narrowed without losing your place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#F5F4F0;color:#111111;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#111111;text-decoration:none}
+a:hover{color:#A6381F}
+:focus-visible{outline:2px solid #A6381F;outline-offset:3px}
+@keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes glowPulse{0%,100%{opacity:1}50%{opacity:.4}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div aria-hidden="true" style="position:fixed;top:0;left:0;right:0;height:2px;z-index:120"><span ref="{{ barRef }}" style="display:block;height:2px;background:#A6381F;width:0%"></span></div>
+
+<header style="position:sticky;top:0;z-index:100;background:rgba(245,244,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid #D9D8D3">
+  <nav aria-label="Primary" style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);height:64px;display:flex;align-items:center;gap:24px">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;margin-right:auto"><img src="../assets/zaidy-logo.png" alt="" style="height:18px;width:auto;display:block"><span style="font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase">Tabrez Zaidy</span></a>
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#6B6B6B" style-hover="color:#111">&larr; Back to Work</a>
+  </nav>
+</header>
+
+<main>
+<article>
+<section style="max-width:1520px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,40px) clamp(32px,4vw,52px);animation:heroUp .7s cubic-bezier(.22,1,.36,1) both">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 24px">E-commerce · UX/UI · Conversion</p>
+  <h1 style="font-weight:800;font-size:clamp(38px,6.4vw,88px);line-height:.99;letter-spacing:-.035em;margin:0 0 26px;max-width:20ch;text-wrap:balance">A Discovery-First E-commerce Experience</h1>
+  <p style="font-size:clamp(18px,1.5vw,23px);line-height:1.6;color:#6B6B6B;margin:0 0 clamp(36px,5vw,56px);max-width:58ch">The catalogue was large, the search was literal and the filters reset your place. Discovery was rebuilt around narrowing rather than browsing.</p>
+  <dl style="margin:0 0 clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;border-top:1px solid #111;border-bottom:1px solid #D9D8D3;padding:22px 0;font-family:'JetBrains Mono',monospace;font-size:12px">
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Role</dt><dd style="margin:8px 0 0">UX/UI Designer</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Tools</dt><dd style="margin:8px 0 0">Figma, WooCommerce</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Platform</dt><dd style="margin:8px 0 0">Responsive web</dd></div>
+  </dl>
+  <div style="background:#fff;border:1px solid #D9D8D3;padding:clamp(18px,3vw,44px)">
+    <div style="background:#F5F4F0;border:1px solid #D9D8D3">
+      <div style="display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid #D9D8D3"><span style="width:9px;height:9px;border-radius:50%;background:#D9D8D3"></span><span style="width:9px;height:9px;border-radius:50%;background:#D9D8D3"></span><span style="width:9px;height:9px;border-radius:50%;background:#D9D8D3"></span><span style="margin-left:14px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B6B6B">catalogue — filtered results</span></div>
+      <div style="padding:clamp(16px,2.4vw,32px);display:flex;gap:clamp(14px,2vw,24px);flex-wrap:wrap">
+        <div style="flex:1 1 160px;display:flex;flex-direction:column;gap:12px">
+          <span style="height:34px;background:#fff;border:1px solid #111"></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Refine</span>
+          <span style="height:8px;width:70%;background:#D9D8D3"></span>
+          <span style="height:8px;width:54%;background:#D9D8D3"></span>
+          <span style="height:8px;width:62%;background:#D9D8D3"></span>
+          <span style="height:8px;width:46%;background:#D9D8D3"></span>
+        </div>
+        <div style="flex:3 1 320px;min-width:0;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:7px 11px;background:#111;color:#F5F4F0;animation:glowPulse 2.6s ease-in-out infinite">Filter ×</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:7px 11px;background:#111;color:#F5F4F0;animation:glowPulse 2.6s ease-in-out .3s infinite">Filter ×</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:7px 11px;border:1px solid #D9D8D3;color:#6B6B6B">Clear all</span></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px">
+            <div style="background:#fff;border:1px solid #D9D8D3;padding:12px;display:flex;flex-direction:column;gap:8px;animation:floatY 3.6s ease-in-out infinite"><span style="height:70px;background:#F5F4F0"></span><span style="height:7px;width:76%;background:#D9D8D3"></span><span style="height:7px;width:44%;background:#111"></span></div>
+            <div style="background:#fff;border:1px solid #D9D8D3;padding:12px;display:flex;flex-direction:column;gap:8px;animation:floatY 3.6s ease-in-out .2s infinite"><span style="height:70px;background:#F5F4F0"></span><span style="height:7px;width:62%;background:#D9D8D3"></span><span style="height:7px;width:50%;background:#111"></span></div>
+            <div style="background:#fff;border:1px solid #D9D8D3;padding:12px;display:flex;flex-direction:column;gap:8px;animation:floatY 3.6s ease-in-out .4s infinite"><span style="height:70px;background:#F5F4F0"></span><span style="height:7px;width:80%;background:#D9D8D3"></span><span style="height:7px;width:42%;background:#111"></span></div>
+            <div style="background:#fff;border:1px solid #D9D8D3;padding:12px;display:flex;flex-direction:column;gap:8px;animation:floatY 3.6s ease-in-out .6s infinite"><span style="height:70px;background:#F5F4F0"></span><span style="height:7px;width:68%;background:#D9D8D3"></span><span style="height:7px;width:46%;background:#111"></span></div>
+            <div style="background:#fff;border:1px solid #D9D8D3;padding:12px;display:flex;flex-direction:column;gap:8px;animation:floatY 3.6s ease-in-out .8s infinite"><span style="height:70px;background:#F5F4F0"></span><span style="height:7px;width:72%;background:#D9D8D3"></span><span style="height:7px;width:52%;background:#111"></span></div>
+            <div style="background:#fff;border:1px solid #D9D8D3;padding:12px;display:flex;flex-direction:column;gap:8px"><span style="height:70px;background:#F5F4F0"></span><span style="height:7px;width:58%;background:#D9D8D3"></span><span style="height:7px;width:48%;background:#111"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="margin:20px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6B6B6B">Scroll to explore &darr;</p>
+</section>
+
+<nav aria-label="Case study sections" style="position:sticky;top:64px;z-index:90;background:rgba(245,244,240,.92);backdrop-filter:blur(10px);border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;gap:22px;overflow-x:auto;height:52px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11.5px">
+    <a href="#overview" data-sec="overview" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Overview</a>
+    <a href="#before" data-sec="before" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Before</a>
+    <a href="#problem" data-sec="problem" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Problem</a>
+    <a href="#opportunity" data-sec="opportunity" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Opportunity</a>
+    <a href="#after" data-sec="after" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">After</a>
+    <a href="#outcome" data-sec="outcome" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Outcome</a>
+    <a href="https://xd.adobe.com/view/b3c03814-23d7-4e2e-a191-9c0e29741b79-e693/?fullscreen" target="_blank" rel="noopener" style="margin-left:auto;flex:none;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:10px 16px;background:#A6381F;border:1px solid #A6381F;color:#F5F4F0" style-hover="background:#111;border-color:#111;color:#F5F4F0">View in Adobe XD &#8599;</a>
+  </div>
+</nav>
+
+<section id="overview" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px);display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,2fr);gap:clamp(32px,5vw,72px)">
+  <div>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">01 — Overview</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0;max-width:20ch">Discovery, not decoration</h2>
+  </div>
+  <div style="max-width:60ch">
+    <p style="font-size:17.5px;line-height:1.75;margin:0 0 16px">Scope covered product discovery, navigation, search, filtering, product comparison, product detail, cart and checkout.</p>
+    <p style="font-size:17.5px;line-height:1.75;color:#6B6B6B;margin:0">The redesign was structural. Almost none of the value came from restyling; it came from changing what the page lets you do next.</p>
+  </div>
+
+  <div style="grid-column:1/-1;border-top:1px solid #D9D8D3;padding-top:clamp(28px,4vw,44px);margin-top:clamp(12px,2vw,20px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 20px">Designed for</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(18px,2.5vw,28px)">
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Elena, 33</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Returning shopper, price-sensitive</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> narrow a large catalogue without losing her place mid-browse.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> filters that reset every time she goes back to a product.</p>
+    </div>
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Jordan, 24</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">First-time visitor</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> compare a few options side by side before deciding.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> literal search results that force her to open a dozen tabs to compare.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="before" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">02 — Before</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">What the old catalogue asked of people</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+      <div style="background:#F5F4F0;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 10px">Before</p><p style="margin:0;font-size:16px;line-height:1.7">Category names that only made sense internally</p></div>
+      <div style="background:#fff;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 10px">After</p><p style="margin:0;font-size:16px;line-height:1.7">Navigation labelled the way customers ask for things</p></div>
+      <div style="background:#F5F4F0;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 10px">Before</p><p style="margin:0;font-size:16px;line-height:1.7">Search matched strings, not intent</p></div>
+      <div style="background:#fff;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 10px">After</p><p style="margin:0;font-size:16px;line-height:1.7">Suggestions, synonyms and a useful empty state</p></div>
+      <div style="background:#F5F4F0;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 10px">Before</p><p style="margin:0;font-size:16px;line-height:1.7">Applying a filter reloaded and scrolled you to the top</p></div>
+      <div style="background:#fff;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 10px">After</p><p style="margin:0;font-size:16px;line-height:1.7">Filters apply in place, with removable chips</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="problem" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
+  <div>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">03 — Problem</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 18px;max-width:22ch">People could not hold a shortlist</h2>
+    <p style="font-size:17px;line-height:1.75;color:#6B6B6B;margin:0;max-width:50ch">Comparison happened in browser tabs because the site offered no way to keep two candidates side by side. Every comparison attempt was a chance to leave.</p>
+  </div>
+  <blockquote style="margin:0;background:#111;color:#F5F4F0;padding:clamp(28px,4vw,44px)">
+    <p style="margin:0 0 16px;font-weight:700;font-size:clamp(21px,2.4vw,30px);line-height:1.3;letter-spacing:-.02em">“I had four tabs open trying to work out which one was the same thing cheaper.”</p>
+    <footer style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85">Recurring feedback theme · [ADD INFORMATION]</footer>
+  </blockquote>
+</section>
+
+<section id="opportunity" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">04 — Opportunity</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">Make the shortlist a first-class object</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+      <div style="background:#fff;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">01</span><h3 style="font-weight:700;font-size:18px;margin:12px 0 8px">Compare in place</h3><p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B6B6B">Select two to four items and see their attributes in one table.</p></div>
+      <div style="background:#fff;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">02</span><h3 style="font-weight:700;font-size:18px;margin:12px 0 8px">Persistent refinement</h3><p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B6B6B">Filters live in the URL, so a shortlist can be shared or reopened.</p></div>
+      <div style="background:#fff;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">03</span><h3 style="font-weight:700;font-size:18px;margin:12px 0 8px">Honest product detail</h3><p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B6B6B">Specifications, availability and total cost stated before the cart.</p></div>
+      <div style="background:#fff;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">04</span><h3 style="font-weight:700;font-size:18px;margin:12px 0 8px">Checkout without detours</h3><p style="margin:0;font-size:15.5px;line-height:1.7;color:#6B6B6B">One column, no account wall, no fields nobody needs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="after" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">05 — After</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:22ch">Comparison and checkout, shipped</h2>
+  <figure style="margin:0 0 clamp(40px,5vw,72px)">
+    <div style="background:#fff;border:1px solid #D9D8D3;padding:clamp(16px,2.4vw,34px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+        <div style="background:#F5F4F0;padding:16px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Attribute</span><span style="height:7px;width:70%;background:#D9D8D3"></span><span style="height:7px;width:60%;background:#D9D8D3"></span><span style="height:7px;width:78%;background:#D9D8D3"></span><span style="height:7px;width:52%;background:#D9D8D3"></span></div>
+        <div style="background:#fff;padding:16px;display:flex;flex-direction:column;gap:10px"><span style="height:50px;background:#F5F4F0"></span><span style="height:7px;width:64%;background:#111"></span><span style="height:7px;width:50%;background:#D9D8D3"></span><span style="height:7px;width:58%;background:#D9D8D3"></span></div>
+        <div style="background:#fff;padding:16px;display:flex;flex-direction:column;gap:10px;outline:2px solid #A6381F;outline-offset:-2px"><span style="height:50px;background:#F5F4F0"></span><span style="height:7px;width:70%;background:#111"></span><span style="height:7px;width:44%;background:#D9D8D3"></span><span style="height:7px;width:62%;background:#D9D8D3"></span></div>
+        <div style="background:#fff;padding:16px;display:flex;flex-direction:column;gap:10px"><span style="height:50px;background:#F5F4F0"></span><span style="height:7px;width:58%;background:#111"></span><span style="height:7px;width:52%;background:#D9D8D3"></span><span style="height:7px;width:48%;background:#D9D8D3"></span></div>
+      </div>
+    </div>
+    <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">Product comparison. The recommended column is marked by outline and label, not colour alone.</figcaption>
+  </figure>
+  <figure style="margin:0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(16px,2vw,24px)">
+      <div style="background:#fff;border:1px solid #D9D8D3;padding:24px;display:flex;flex-direction:column;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B">Cart</span><div style="display:flex;gap:12px;align-items:center"><span style="width:46px;height:46px;background:#F5F4F0;border:1px solid #D9D8D3;flex:none"></span><span style="height:8px;flex:1;background:#D9D8D3"></span></div><div style="display:flex;gap:12px;align-items:center"><span style="width:46px;height:46px;background:#F5F4F0;border:1px solid #D9D8D3;flex:none"></span><span style="height:8px;flex:1;background:#D9D8D3"></span></div><div style="border-top:1px solid #D9D8D3;padding-top:12px;display:flex;justify-content:space-between"><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B6B6B">Total</span><span style="font-weight:800;font-size:20px">[ADD]</span></div></div>
+      <div style="background:#fff;border:1px solid #D9D8D3;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B">Checkout — one column</span><span style="height:38px;background:#F5F4F0;border:1px solid #D9D8D3"></span><span style="height:38px;background:#F5F4F0;border:1px solid #D9D8D3"></span><span style="height:38px;background:#F5F4F0;border:1px solid #D9D8D3"></span><span style="height:44px;background:#111;margin-top:6px"></span></div>
+    </div>
+    <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">Cart and checkout: totals visible, guest checkout available, no hidden steps.</figcaption>
+  </figure>
+</section>
+
+<section id="outcome" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">06 — Outcome &amp; learnings</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">What changed for shoppers</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3;margin-bottom:clamp(32px,4vw,52px)">
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Add-to-cart rate</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">More product pages ended in an add-to-cart instead of a bounce.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Search exits</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">Fewer searches ended with someone leaving before applying a filter.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Checkout completion</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">More carts converted once checkout lost its surprise fields.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px)">
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What worked</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Putting filter state in the URL made shortlists shareable, which quietly turned comparison into a support tool as well as a sales one.</p></div>
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What I would change</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">The comparison table needed a mobile-native pattern earlier; the first attempt was a desktop table that had to be rethought.</p></div>
+    </div>
+  </div>
+</section>
+
+<nav aria-label="Case study navigation" style="background:#111;color:#F5F4F0">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:center">
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#B5B5AF" style-hover="color:#F5F4F0">&larr; Back to Work</a>
+    <a href="brand-identity.dc.html" style="justify-self:end;text-align:right;color:#F5F4F0" style-hover="color:#C8633F">
+      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85;margin-bottom:8px">Next project</span>
+      <span style="display:block;font-weight:800;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em">Brand Identity &rarr;</span>
+    </a>
+  </div>
+</nav>
+</article>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  barRef = React.createRef();
+  componentDidMount() {
+    this.p = 0;
+    this.onScroll = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const p = h > 0 ? Math.min(100, Math.round((window.scrollY / h) * 100)) : 0;
+      if (p === this.p) return;
+      this.p = p;
+      if (this.barRef.current) this.barRef.current.style.width = p + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+      this.io = io;
+    } else {
+      document.querySelectorAll('.rv').forEach((el) => el.classList.add('in'));
+    }
+    this.secLinks = Array.from(document.querySelectorAll('nav[aria-label="Case study sections"] a[data-sec]'));
+    if (this.secLinks.length) {
+      const setActive = (id) => {
+        this.secLinks.forEach((a) => {
+          const on = a.dataset.sec === id;
+          a.style.background = on ? '#A6381F' : 'transparent';
+          a.style.color = on ? '#F5F4F0' : '#6B6B6B';
+        });
+      };
+      this.visibleSecIds = new Set();
+      const updateActive = () => {
+        const order = this.secLinks.map((a) => a.dataset.sec);
+        for (let i = order.length - 1; i >= 0; i--) {
+          if (this.visibleSecIds.has(order[i])) { setActive(order[i]); return; }
+        }
+      };
+      const secIO = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) this.visibleSecIds.add(e.target.id); else this.visibleSecIds.delete(e.target.id); });
+        updateActive();
+      }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
+      this.secLinks.forEach((a) => { const sec = document.getElementById(a.dataset.sec); if (sec) secIO.observe(sec); });
+      this.secIO = secIO;
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); if (this.io) this.io.disconnect(); if (this.secIO) this.secIO.disconnect(); }
+  renderVals() { return { barRef: this.barRef }; }
+}
+</script>
+</body>
+</html>

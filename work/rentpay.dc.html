@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>RentPay: Modernizing Rent Payments with Rewards — Tabrez Zaidy</title>
+<meta name="description" content="Case study: RentPay, a fintech prop-tech app that turns rent payment into an on-time, rewarded habit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#F5F4F0;color:#111111;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#111111;text-decoration:none;transition:background .28s ease,color .28s ease,border-color .28s ease,box-shadow .35s ease}
+a:hover{color:#A6381F}
+:focus-visible{outline:2px solid #A6381F;outline-offset:3px}
+@keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes lineGrow{0%,100%{transform:scaleX(.6)}50%{transform:scaleX(1)}}
+@keyframes glowPulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes blink{0%,45%{opacity:1}55%,100%{opacity:.15}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div aria-hidden="true" style="position:fixed;top:0;left:0;right:0;height:2px;z-index:120"><span ref="{{ barRef }}" style="display:block;height:2px;background:#A6381F;width:0%"></span></div>
+
+<header style="position:sticky;top:0;z-index:100;background:rgba(245,244,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid #D9D8D3">
+  <nav aria-label="Primary" style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);height:64px;display:flex;align-items:center;gap:24px">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;margin-right:auto"><img src="../assets/zaidy-logo.png" alt="" style="height:18px;width:auto;display:block"><span style="font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase">Tabrez Zaidy</span></a>
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#6B6B6B" style-hover="color:#111">&larr; Back to Work</a>
+  </nav>
+</header>
+
+<main>
+<article>
+<section style="max-width:1520px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,40px) clamp(32px,4vw,52px);animation:heroUp .7s cubic-bezier(.22,1,.36,1) both">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 24px">Product Design · UX/UI · Fintech · Prop-Tech</p>
+  <h1 style="font-weight:800;font-size:clamp(38px,6.4vw,88px);line-height:.99;letter-spacing:-.035em;margin:0 0 26px;max-width:19ch;text-wrap:balance">RentPay: making rent day feel like a win</h1>
+  <p style="font-size:clamp(18px,1.5vw,23px);line-height:1.6;color:#6B6B6B;margin:0 0 clamp(36px,5vw,56px);max-width:58ch">Rent is the largest recurring payment most tenants make, and the least rewarding. RentPay turns it into a tracked, rewarded habit — one payment, one screen, a receipt that actually means something.</p>
+  <dl style="margin:0 0 clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;border-top:1px solid #111;border-bottom:1px solid #D9D8D3;padding:22px 0;font-family:'JetBrains Mono',monospace;font-size:12px">
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Role</dt><dd style="margin:8px 0 0">Product Designer</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Tools</dt><dd style="margin:8px 0 0">Figma</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Platform</dt><dd style="margin:8px 0 0">iOS &amp; Android</dd></div>
+  </dl>
+  <div style="background:#fff;border:1px solid #D9D8D3;padding:clamp(18px,3vw,44px)">
+    <div style="background:#F5F4F0;border:1px solid #D9D8D3;padding:clamp(16px,2.5vw,34px);display:flex;gap:clamp(16px,3vw,34px);flex-wrap:wrap;justify-content:center">
+      <div style="width:252px;max-width:100%;border:8px solid #111;border-radius:28px;overflow:hidden;background:#111">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:11px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:rgba(255,255,255,.7)">Good morning,<br>Sarah</span><span style="width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.25);animation:glowPulse 2.8s ease-in-out infinite"></span></div>
+          <div style="background:#fff;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;animation:floatY 4s ease-in-out infinite">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#6B6B6B">Next payment</span><span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;color:#A6381F;background:#F5F4F0;padding:3px 6px;border-radius:20px;animation:blink 2.6s ease-in-out infinite">Due soon</span></div>
+            <span style="font-weight:800;font-size:20px;letter-spacing:-.02em;color:#111">8,500 AED</span>
+            <span style="height:26px;border-radius:6px;background:#A6381F;animation:glowPulse 2.6s ease-in-out infinite"></span>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center;animation:floatY 4s ease-in-out .3s infinite"><span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#6B6B6B">Rewards earned</span><span style="font-weight:700;font-size:12px;color:#111">425 AED</span></div>
+        </div>
+      </div>
+      <div style="width:252px;max-width:100%;border:8px solid #111;border-radius:28px;overflow:hidden;background:#fff">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Recent payments</span>
+          <div style="border-bottom:1px solid #D9D8D3;padding-bottom:8px;display:flex;justify-content:space-between;animation:floatY 3.8s ease-in-out infinite"><div style="display:flex;flex-direction:column;gap:4px"><span style="height:7px;width:60px;background:#111;transform-origin:left;animation:lineGrow 3.2s ease-in-out infinite"></span><span style="height:6px;width:40px;background:#D9D8D3"></span></div><div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end"><span style="height:7px;width:44px;background:#111"></span><span style="font-family:'JetBrains Mono',monospace;font-size:7px;color:#111;background:#F5F4F0;padding:2px 6px;border-radius:20px">Paid</span></div></div>
+          <div style="border-bottom:1px solid #D9D8D3;padding-bottom:8px;display:flex;justify-content:space-between;animation:floatY 3.8s ease-in-out .2s infinite"><div style="display:flex;flex-direction:column;gap:4px"><span style="height:7px;width:60px;background:#111;transform-origin:left;animation:lineGrow 3.2s ease-in-out .2s infinite"></span><span style="height:6px;width:40px;background:#D9D8D3"></span></div><div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end"><span style="height:7px;width:44px;background:#111"></span><span style="font-family:'JetBrains Mono',monospace;font-size:7px;color:#111;background:#F5F4F0;padding:2px 6px;border-radius:20px">Paid</span></div></div>
+          <div style="display:flex;justify-content:space-between;animation:floatY 3.8s ease-in-out .4s infinite"><div style="display:flex;flex-direction:column;gap:4px"><span style="height:7px;width:60px;background:#111;transform-origin:left;animation:lineGrow 3.2s ease-in-out .4s infinite"></span><span style="height:6px;width:40px;background:#D9D8D3"></span></div><div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end"><span style="height:7px;width:44px;background:#111"></span><span style="font-family:'JetBrains Mono',monospace;font-size:7px;color:#111;background:#F5F4F0;padding:2px 6px;border-radius:20px">Paid</span></div></div>
+          <span style="height:40px;background:#A6381F;border-radius:8px;margin-top:4px;animation:glowPulse 2.6s ease-in-out infinite"></span>
+        </div>
+      </div>
+      <div style="width:252px;max-width:100%;border:8px solid #111;border-radius:28px;overflow:hidden;background:#111">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px 14px 30px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+          <span style="width:56px;height:56px;border-radius:50%;background:#fff;margin-top:30px;display:grid;place-items:center;color:#A6381F;font-weight:800;font-size:22px;animation:floatY 2.6s ease-in-out infinite">&#10003;</span>
+          <span style="font-weight:800;font-size:17px;color:#fff;letter-spacing:-.01em">Payment Successful!</span>
+          <span style="font-size:10.5px;color:rgba(255,255,255,.85);line-height:1.5">Your rent payment of 8,500 AED has been processed.</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#fff">&#10022; +120 reward points earned!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="margin:20px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6B6B6B">Scroll to explore &darr;</p>
+</section>
+
+<nav aria-label="Case study sections" style="position:sticky;top:64px;z-index:90;background:rgba(245,244,240,.92);backdrop-filter:blur(10px);border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;gap:22px;overflow-x:auto;height:52px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11.5px">
+    <a href="#overview" data-sec="overview" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Overview</a>
+    <a href="#challenge" data-sec="challenge" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Challenge</a>
+    <a href="#structure" data-sec="structure" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Structure</a>
+    <a href="#design" data-sec="design" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Design</a>
+    <a href="#system" data-sec="system" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">System</a>
+    <a href="#outcome" data-sec="outcome" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Outcome</a>
+    <a href="https://www.figma.com/design/ypLLjT4sFNKScGfAnAyj7a/Fintech-Prop-Tech-Rent-App?node-id=0-1&t=Kb9rqLeaYrhKJ4jX-1" target="_blank" rel="noopener" style="margin-left:auto;flex:none;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:10px 16px;background:#A6381F;border:1px solid #A6381F;color:#F5F4F0" style-hover="background:#111;border-color:#111;color:#F5F4F0">View on Figma &#8599;</a>
+  </div>
+</nav>
+
+<section id="overview" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px);display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,2fr);gap:clamp(32px,5vw,72px)">
+  <div>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">01 — Overview</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0;max-width:20ch">A bill, reframed as a balance sheet</h2>
+  </div>
+  <div style="max-width:60ch">
+    <p style="font-size:17.5px;line-height:1.75;margin:0 0 16px">Tenants already know the number and the date. What they don't have is a record: what they've paid this year, whether they've ever been late, what that reliability is worth. RentPay's home screen answers those before it asks for money.</p>
+    <p style="font-size:17.5px;line-height:1.75;color:#6B6B6B;margin:0">Scope: onboarding and login, home dashboard, rent payment flow, payment confirmation, rewards, service add-ons (utilities, internet, cleaning, repairs) and payment history.</p>
+  </div>
+
+  <div style="grid-column:1/-1;border-top:1px solid #D9D8D3;padding-top:clamp(28px,4vw,44px);margin-top:clamp(12px,2vw,20px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 20px">Designed for</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(18px,2.5vw,28px)">
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Farah, 31</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Tenant</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> pay rent and know it is logged, without calling the office to confirm.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> no receipt or record that rent was paid on time.</p>
+    </div>
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Omar, 40</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Property manager</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> see who paid and who is late without chasing a spreadsheet.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> reconciling payments manually across tenants every month.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="challenge" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">02 — Challenge</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:26ch">A transfer with no memory and no upside</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">No record</p><p style="margin:0;font-size:15.5px;line-height:1.7">Bank transfers leave no trace a tenant can point to later — not to a landlord, not to a credit file.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">No incentive</p><p style="margin:0;font-size:15.5px;line-height:1.7">Paying on time and paying late look identical from the tenant's side. Nothing rewards the habit.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Scattered bills</p><p style="margin:0;font-size:15.5px;line-height:1.7">Utilities, internet, cleaning and repairs sit in separate apps, separate logins, separate due dates.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Trust</p><p style="margin:0;font-size:15.5px;line-height:1.7">This app moves someone's biggest monthly expense. It has to look and feel like a bank, not a startup.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="structure" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">03 — Structure</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">The payment is one step in a longer loop</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:clamp(32px,4vw,52px)">
+    <div style="flex:1 1 150px;border:1px solid #A6381F;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">01</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Due</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Amount and date shown before anything else</p></div>
+    <div style="flex:1 1 150px;border:1px solid #A6381F;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">02</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Pay</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">One confirmed action, one saved method</p></div>
+    <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">03</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Confirm</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">A receipt and the points it earned</p></div>
+    <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">04</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Accrue</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Rewards balance and on-time streak update</p></div>
+    <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">05</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Redeem</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Rewards apply back to services and add-ons</p></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+    <div style="background:#F5F4F0;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 10px">Before</p><p style="margin:0;font-size:16px;line-height:1.7">A bank transfer with a memo field for a reference number</p></div>
+    <div style="background:#fff;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 10px">After</p><p style="margin:0;font-size:16px;line-height:1.7">A dashboard that remembers every payment and rewards the streak</p></div>
+    <div style="background:#F5F4F0;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 10px">Before</p><p style="margin:0;font-size:16px;line-height:1.7">Four bills, four apps, four due dates</p></div>
+    <div style="background:#fff;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 10px">After</p><p style="margin:0;font-size:16px;line-height:1.7">Quick Access puts utilities, internet, cleaning and repairs one tap from home</p></div>
+  </div>
+</section>
+
+<section id="design" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">04 — Design decisions</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">Three decisions that shaped the app</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(24px,3vw,44px);margin-bottom:clamp(40px,5vw,72px)">
+      <div>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 12px">01 — The due-payment card leads the app</p>
+        <p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Amount, due date and a status pill sit in a white card against a blue field the instant the app opens. Nothing about balances, points or history is allowed to compete with it before the payment is made.</p>
+      </div>
+      <div>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 12px">02 — Reliability is shown, not claimed</p>
+        <p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Paid-this-year, rewards earned and on-time-payments ratio sit directly below the fold as plain numbers. A 12/12 streak is a stronger trust signal than any badge or copy could be.</p>
+      </div>
+      <div>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 12px">03 — Confirmation is a full, calm screen</p>
+        <p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">A large green success state confirms the amount, the processing, and the points earned — a deliberate pause after a large transfer, before returning to the dashboard.</p>
+      </div>
+    </div>
+    <figure style="margin:0 0 clamp(40px,5vw,72px)">
+      <div style="background:#F5F4F0;border:1px solid #D9D8D3;padding:clamp(16px,2.4vw,34px);display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(16px,2vw,24px)">
+        <div style="background:#fff;border:1px solid #D9D8D3;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Paid this year</span><span style="font-weight:800;font-size:26px;letter-spacing:-.02em">85,000 AED</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#111">&#10003; up to date</span></div>
+        <div style="background:#fff;border:1px solid #D9D8D3;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Rewards earned</span><span style="font-weight:800;font-size:26px;letter-spacing:-.02em">425 AED</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#A6381F">&#127873; redeemable now</span></div>
+        <div style="background:#fff;border:1px solid #D9D8D3;border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">On-time payments</span><span style="font-weight:800;font-size:26px;letter-spacing:-.02em">12/12</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#A6381F">&#8599; perfect streak</span></div>
+      </div>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">Three numbers a tenant can point to. This is the trust layer of the whole product.</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <div style="background:#F5F4F0;border:1px solid #D9D8D3;padding:clamp(16px,2.5vw,36px);display:flex;gap:clamp(16px,3vw,40px);flex-wrap:wrap;justify-content:center">
+        <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#111">
+          <div style="height:22px;background:#111"></div>
+          <div style="padding:14px;display:flex;flex-direction:column;gap:9px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.8)">Welcome to RentPay</span>
+            <span style="height:12px;width:78%;background:#fff;border-radius:3px"></span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:4px"><span style="height:38px;background:#fff;border-radius:6px"></span><span style="height:38px;background:#fff;border-radius:6px"></span><span style="height:38px;background:#fff;border-radius:6px"></span><span style="height:38px;background:#fff;border-radius:6px"></span></div>
+            <span style="height:44px;background:#fff;border-radius:20px;margin-top:8px"></span>
+          </div>
+        </div>
+        <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#fff">
+          <div style="height:22px;background:#111"></div>
+          <div style="padding:14px;display:flex;flex-direction:column;gap:9px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Quick access</span>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px"><span style="aspect-ratio:1;background:#F5F4F0;border-radius:10px"></span><span style="aspect-ratio:1;background:#F5F4F0;border-radius:10px"></span><span style="aspect-ratio:1;background:#F5F4F0;border-radius:10px"></span><span style="aspect-ratio:1;background:#F5F4F0;border-radius:10px"></span></div>
+            <span style="height:8px;width:60%;background:#111;margin-top:6px"></span>
+            <div style="border:1px solid #D9D8D3;border-radius:8px;padding:10px;display:flex;justify-content:space-between"><span style="height:7px;width:44%;background:#D9D8D3"></span><span style="height:7px;width:20%;background:#111"></span></div>
+            <div style="border:1px solid #D9D8D3;border-radius:8px;padding:10px;display:flex;justify-content:space-between"><span style="height:7px;width:50%;background:#D9D8D3"></span><span style="height:7px;width:20%;background:#111"></span></div>
+          </div>
+        </div>
+        <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#fff">
+          <div style="height:22px;background:#111"></div>
+          <div style="display:flex;justify-content:space-around;align-items:center;padding:10px 6px;border-top:1px solid #D9D8D3;margin-top:220px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;color:#A6381F">Home</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;color:#6B6B6B">Services</span>
+            <span style="width:34px;height:34px;border-radius:9px;background:#A6381F"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;color:#6B6B6B">Rewards</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:7.5px;color:#6B6B6B">Profile</span>
+          </div>
+        </div>
+      </div>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">Onboarding, Quick Access add-ons and the five-item tab bar with Pay always centered.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="system" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">05 — System</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">Fintech restraint, prop-tech warmth</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Product palette</p>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#155DFC;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#155DFC &nbsp;primary</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#00A63E;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#00A63E &nbsp;paid / success</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#E17100;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#E17100 &nbsp;due soon</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#9810FA;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#9810FA &nbsp;rewards</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#F9FAFB;border:1px solid #D9D8D3;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#F9FAFB &nbsp;surface</span></div>
+      </div>
+    </div>
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Typography</p>
+      <p style="margin:0 0 10px;font-weight:800;font-size:30px;line-height:1;letter-spacing:-.02em;font-family:-apple-system,system-ui,sans-serif">SF Pro</p>
+      <p style="margin:0 0 8px;font-size:15.5px;line-height:1.6;color:#111">48 / 30 / 24 / 20 / 18 / 16 / 14 / 12 — regular, medium, semibold, bold.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.6;color:#6B6B6B">Native system type — the app reads like the OS, not a brand exercise.</p>
+    </div>
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Status pills</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border-radius:20px;background:#F5F4F0;color:#A6381F;padding:6px 12px">Due upcoming</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border-radius:20px;background:#F5F4F0;color:#111;padding:6px 12px">Paid</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border-radius:20px;background:#F5F4F0;color:#A6381F;padding:6px 12px">Processing</span>
+      </div>
+      <p style="margin:16px 0 0;font-size:14.5px;line-height:1.6;color:#6B6B6B">Rounded pills, not squared badges — softer than the rest of the fintech chrome, on purpose.</p>
+    </div>
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Screens covered</p>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15.5px;color:#111"><li>Onboarding &amp; auth — 3 screens</li><li>Home dashboard</li><li>Pay rent &amp; confirmation</li><li>Rewards &amp; redemption</li><li>Services, history, profile</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="outcome" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">06 — Outcome &amp; learnings</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:22ch">Trust is a design decision, repeated</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3;margin-bottom:clamp(32px,4vw,52px)">
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">On-time payment rate</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">More tenants paid before the due date instead of after it.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Time to complete a payment</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">Paying rent became a single screen instead of a multi-step form.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Rewards redemption</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">Tenants started redeeming points instead of letting them sit unused.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px)">
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What worked</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Leading with the paid-this-year and streak numbers, instead of hiding them in a profile tab, made the app feel like proof of good tenancy rather than another bill.</p></div>
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What I would change</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Rewards currently only redeem toward add-on services. Letting points offset rent directly would close the loop the app is already promising.</p></div>
+    </div>
+  </div>
+</section>
+
+<nav aria-label="Case study navigation" style="background:#111;color:#F5F4F0">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:center">
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#B5B5AF" style-hover="color:#F5F4F0">&larr; Back to Work</a>
+    <a href="ecommerce.dc.html" style="justify-self:end;text-align:right;color:#F5F4F0" style-hover="color:#C8633F">
+      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85;margin-bottom:8px">Next project</span>
+      <span style="display:block;font-weight:800;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em">E-commerce Experience &rarr;</span>
+    </a>
+  </div>
+</nav>
+</article>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  barRef = React.createRef();
+  componentDidMount() {
+    this.p = 0;
+    this.onScroll = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const p = h > 0 ? Math.min(100, Math.round((window.scrollY / h) * 100)) : 0;
+      if (p === this.p) return;
+      this.p = p;
+      if (this.barRef.current) this.barRef.current.style.width = p + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+      this.io = io;
+    } else {
+      document.querySelectorAll('.rv').forEach((el) => el.classList.add('in'));
+    }
+    this.secLinks = Array.from(document.querySelectorAll('nav[aria-label="Case study sections"] a[data-sec]'));
+    if (this.secLinks.length) {
+      const setActive = (id) => {
+        this.secLinks.forEach((a) => {
+          const on = a.dataset.sec === id;
+          a.style.background = on ? '#A6381F' : 'transparent';
+          a.style.color = on ? '#F5F4F0' : '#6B6B6B';
+        });
+      };
+      this.visibleSecIds = new Set();
+      const updateActive = () => {
+        const order = this.secLinks.map((a) => a.dataset.sec);
+        for (let i = order.length - 1; i >= 0; i--) {
+          if (this.visibleSecIds.has(order[i])) { setActive(order[i]); return; }
+        }
+      };
+      const secIO = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) this.visibleSecIds.add(e.target.id); else this.visibleSecIds.delete(e.target.id); });
+        updateActive();
+      }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
+      this.secLinks.forEach((a) => { const sec = document.getElementById(a.dataset.sec); if (sec) secIO.observe(sec); });
+      this.secIO = secIO;
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); if (this.io) this.io.disconnect(); if (this.secIO) this.secIO.disconnect(); }
+  renderVals() { return { barRef: this.barRef }; }
+}
+</script>
+</body>
+</html>

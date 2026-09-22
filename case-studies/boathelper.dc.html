@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>BoatHelper: a two-sided marketplace for marine repair — Tabrez Zaidy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../image-slot.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:oklch(97.8% 0.004 240);color:oklch(21% 0.012 240);font-family:'Public Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+</style>
+</helmet>
+
+<nav style="position:sticky;top:0;z-index:60;background:oklch(97.8% 0.004 240 / .9);backdrop-filter:blur(10px);border-bottom:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="width:100%;max-width:1140px;margin:0 auto;padding-inline:24px;display:flex;align-items:center;gap:22px;height:60px;flex-wrap:wrap">
+    <a href="../Tabrez%20Zaidy%20Resume.dc.html" aria-label="Top" style="display:flex;align-items:center;flex:none"><img src="../assets/zaidy-logo.png" alt="Zaidy" style="height:22px;width:auto;display:block"></a>
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:oklch(40% 0.012 240);margin-right:auto">Tabrez Zaidy</span>
+    <div style="display:flex;gap:20px;flex-wrap:wrap">
+      <a href="../Tabrez%20Zaidy%20Resume.dc.html#work" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:oklch(38% 0.012 240)">Work</a>
+      <a href="../Tabrez%20Zaidy%20Resume.dc.html#about" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:oklch(38% 0.012 240)">About</a>
+      <a href="../Tabrez%20Zaidy%20Resume.dc.html#contact" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:oklch(38% 0.012 240)">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header style="padding-block:clamp(48px,7vw,80px) clamp(32px,5vw,56px);border-bottom:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:oklch(42% 0.1 250);margin:0 0 16px">Concept · Two-sided marketplace</p>
+    <h1 style="font-family:'Public Sans',sans-serif;font-weight:800;font-size:clamp(40px,6.5vw,72px);line-height:1.0;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance">BoatHelper: getting a boat fixed without the word-of-mouth guesswork</h1>
+    <p style="font-size:clamp(17px,1.3vw,20px);color:oklch(38% 0.012 240);max-width:62ch;margin:0 0 22px">A mobile marketplace that turns "who do I even call?" into a structured task: post the job, compare vetted marine specialists on price and rating, agree in chat, and track the work to done.</p>
+    <ul style="display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none">
+      <li style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid oklch(21% 0.012 240 / .12);padding:5px 9px;color:oklch(38% 0.012 240);background:#fff">Marketplace design</li>
+      <li style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid oklch(21% 0.012 240 / .12);padding:5px 9px;color:oklch(38% 0.012 240);background:#fff">Task flows</li>
+      <li style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid oklch(21% 0.012 240 / .12);padding:5px 9px;color:oklch(38% 0.012 240);background:#fff">Mobile UI</li>
+      <li style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid oklch(21% 0.012 240 / .12);padding:5px 9px;color:oklch(38% 0.012 240);background:#fff">Information architecture</li>
+    </ul>
+    <a href="https://www.figma.com/proto/oUJEBmsD8llShcLS9l2RHd/BoatHelper?node-id=47-244&t=hDdrvQCsSqVdhHtQ-1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px;margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:14px 24px;border:1px solid oklch(21% 0.012 240);background:oklch(21% 0.012 240);color:#fff" style-hover="background:oklch(15% 0.012 240);border-color:oklch(15% 0.012 240)">View in Figma &#8599;</a>
+  </div>
+</header>
+
+<div style="margin-top:clamp(32px,5vw,48px)">
+  <image-slot id="boathelper-img-hero" style="width:100%;aspect-ratio:16/9;display:block" shape="rect" placeholder="Home dashboard — task stats, boats, market activity, tasks, craftsmen"></image-slot>
+</div>
+
+<section style="padding-block:clamp(40px,5vw,64px)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <h2 style="font-family:'Public Sans',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.015em;margin:0 0 16px">The problem</h2>
+    <p style="color:oklch(38% 0.012 240);margin:0 0 16px;font-size:17px;max-width:66ch">Marine repair runs on referrals. An owner with a barnacle-fouled hull or a rough-running engine asks around the marina, gets two or three names, and has no real way to compare them — no consistent pricing, no verified credentials, no record of who actually finishes on time. A specialist, meanwhile, has no steady channel of qualified leads: just calls that may or may not turn into paid work.</p>
+    <p style="color:oklch(38% 0.012 240);margin:0;font-size:17px;max-width:66ch">Both sides needed the same thing: a shared, structured description of the job — what boat, what's wrong, what it should cost, and where and when — that either side could act on with confidence.</p>
+  </div>
+</section>
+
+<section style="padding-block:clamp(40px,5vw,64px);background:#fff;border-block:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <h2 style="font-family:'Public Sans',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.015em;margin:0 0 16px">The approach</h2>
+    <p style="color:oklch(38% 0.012 240);margin:0 0 16px;font-size:17px;max-width:66ch">I designed BoatHelper around a single object: the task. An owner registers a boat, then raises a task against it — category, description, budget range, a map pin for the repair location, target dates, and photos of the damage. That task becomes the unit everything else hangs off: offers from craftsmen, the chat thread, the eventual agreement, and the progress record.</p>
+    <p style="color:oklch(38% 0.012 240);margin:0 0 32px;font-size:17px;max-width:66ch">On the dashboard, price data across categories (varnishing, engine, electricals, hull work) is surfaced as a trend chart, so an owner posting a new task has a rough sense of a fair price before a single offer comes in. Craftsmen are presented as a comparable list — specialty, rate, certification, distance, and review count — rather than a wall of profiles to dig through individually.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:12px;padding-bottom:clamp(40px,5vw,64px)">
+    <image-slot id="boathelper-img-dashboard" style="width:100%;aspect-ratio:4/3;display:block" shape="rect" placeholder="Home dashboard, close crop — task statistics & market activity"></image-slot>
+    <image-slot id="boathelper-img-craftsmen" style="width:100%;aspect-ratio:4/3;display:block" shape="rect" placeholder="Craftsman listing — rate, rating, certification, distance"></image-slot>
+  </div>
+</section>
+
+<section style="padding-block:clamp(40px,5vw,64px)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:oklch(42% 0.1 250);margin:0 0 12px">The process, screen by screen</p>
+    <h2 style="font-family:'Public Sans',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.015em;margin:0">How a job moves from "something's wrong" to "done"</h2>
+  </div>
+</section>
+
+<section style="padding-block:clamp(32px,4vw,48px);background:#fff;border-top:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:oklch(40% 0.012 240)">01 · Home</span>
+    <h3 style="font-family:'Public Sans',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.01em;margin:10px 0 12px">A dashboard that answers "where do things stand?" first</h3>
+    <p style="color:oklch(38% 0.012 240);margin:0;font-size:16.5px;max-width:66ch">Open, in-progress, and done counts sit at the top, ahead of anything else, because that's the question an owner opens the app to answer. Below it: the boats on file, live market pricing by repair category, the owner's own open tasks with their offer counts, a shortlist of nearby craftsmen, and a feed of other owners in the same marina community.</p>
+  </div>
+</section>
+
+<div style="margin-bottom:clamp(40px,5vw,64px)">
+  <image-slot id="boathelper-img-home-full" style="width:100%;aspect-ratio:9/16;max-height:820px;display:block;object-fit:cover" shape="rect" placeholder="Home dashboard, full screen"></image-slot>
+</div>
+
+<section style="padding-block:clamp(32px,4vw,48px);background:#fff;border-top:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:oklch(40% 0.012 240)">02 · Create task</span>
+    <h3 style="font-family:'Public Sans',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.01em;margin:10px 0 12px">Turning "the engine sounds wrong" into something a craftsman can quote</h3>
+    <p style="color:oklch(38% 0.012 240);margin:0 0 16px;font-size:16.5px;max-width:66ch">The task form asks for exactly what a specialist needs to give a real quote: which boat, a task category, a plain-language description, a budget range, start and completion dates, and photos. Location is set by dropping a pin on an embedded map rather than typing an address, since most repair sites are a slip or mooring number, not a street.</p>
+    <p style="color:oklch(38% 0.012 240);margin:0;font-size:16.5px;max-width:66ch">An owner can save the task as a draft and come back to it, or publish it straight to the open-task pool where craftsmen can send offers.</p>
+  </div>
+</section>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:12px;margin-bottom:clamp(40px,5vw,64px)">
+  <image-slot id="boathelper-img-createtask" style="width:100%;aspect-ratio:3/4;display:block" shape="rect" placeholder="Create task — form fields, budget range"></image-slot>
+  <image-slot id="boathelper-img-createtask-map" style="width:100%;aspect-ratio:3/4;display:block" shape="rect" placeholder="Create task — map pin for repair location"></image-slot>
+</div>
+
+<section style="padding-block:clamp(32px,4vw,48px);background:#fff;border-top:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:oklch(40% 0.012 240)">03 · Craftsman marketplace</span>
+    <h3 style="font-family:'Public Sans',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.01em;margin:10px 0 12px">Comparing specialists the way you'd compare anything else</h3>
+    <p style="color:oklch(38% 0.012 240);margin:0;font-size:16.5px;max-width:66ch">Every craftsman card carries the same five facts in the same order — specialty, hourly rate, star rating with review count, certification badge, and distance — plus an availability status and years of experience. Keeping the fields identical across the list is what makes it a comparison rather than a directory: an owner can scan rate against rating without opening a single profile.</p>
+  </div>
+</section>
+
+<div style="margin-bottom:clamp(40px,5vw,64px)">
+  <image-slot id="boathelper-img-craftsmen-full" style="width:100%;aspect-ratio:9/16;max-height:820px;display:block;object-fit:cover" shape="rect" placeholder="Craftsman listing, full screen"></image-slot>
+</div>
+
+<section style="padding-block:clamp(32px,4vw,48px);background:#fff;border-top:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:oklch(40% 0.012 240)">04 · Task lifecycle</span>
+    <h3 style="font-family:'Public Sans',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.01em;margin:10px 0 12px">One record from open to done, not a chat thread that trails off</h3>
+    <p style="color:oklch(38% 0.012 240);margin:0 0 16px;font-size:16.5px;max-width:66ch">Every task carries a status — open, in progress, or done — and the same three tabs filter the list everywhere it appears. Once an owner accepts an offer, the task becomes an agreement: service details, start and end dates, the repair coordinates, and the photos stay attached to it for the life of the job.</p>
+    <p style="color:oklch(38% 0.012 240);margin:0;font-size:16.5px;max-width:66ch">An in-progress task shows the assigned craftsman, a progress indicator, the agreed price and estimated completion time, and direct Chat and Call actions — then a Mark as complete / Review pair once the work is actually done. Nothing about the job's status lives only in someone's memory of a phone call.</p>
+  </div>
+</section>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:12px;margin-bottom:clamp(40px,5vw,64px)">
+  <image-slot id="boathelper-img-tasklist" style="width:100%;aspect-ratio:3/4;display:block" shape="rect" placeholder="Task listing — Open/In progress/Done tabs, agreements"></image-slot>
+  <image-slot id="boathelper-img-agreement" style="width:100%;aspect-ratio:3/4;display:block" shape="rect" placeholder="In-progress agreement — price, completion time, mark complete"></image-slot>
+</div>
+
+<section style="padding-block:clamp(32px,4vw,48px);background:#fff;border-top:1px solid oklch(21% 0.012 240 / .12)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:oklch(40% 0.012 240)">05 · Chat</span>
+    <h3 style="font-family:'Public Sans',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.01em;margin:10px 0 12px">Keeping the conversation attached to the job</h3>
+    <p style="color:oklch(38% 0.012 240);margin:0;font-size:16.5px;max-width:66ch">Chat opens directly from a craftsman's card or an active agreement, never as a separate inbox disconnected from the task it's about. Attachments carry over the same way they do in task creation, so a photo of a part or a revised quote lands in context instead of a generic messaging screen.</p>
+  </div>
+</section>
+
+<div style="margin-bottom:clamp(40px,5vw,64px)">
+  <image-slot id="boathelper-img-chat" style="width:100%;aspect-ratio:16/9;display:block" shape="rect" placeholder="Chat with a craftsman"></image-slot>
+</div>
+
+<section style="padding-block:clamp(40px,5vw,64px)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px)">
+    <h2 style="font-family:'Public Sans',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.015em;margin:0 0 16px">The outcome</h2>
+    <p style="color:oklch(38% 0.012 240);margin:0 0 16px;font-size:17px;max-width:66ch">The result is a single task object that both sides can trust: an owner always knows whether a job is unanswered, being worked, or finished, and a craftsman sees a real brief — boat, budget, location, dates, photos — before ever writing a quote. Price trends and comparable craftsman cards replace guesswork with a frame of reference on both sides of the deal.</p>
+    <p style="color:oklch(38% 0.012 240);margin:0;font-size:17px;max-width:66ch">The system was designed to extend cleanly: the same task/offer/agreement structure covers any category of marine work without new screens, just new category tags on an existing flow.</p>
+  </div>
+</section>
+
+<footer style="background:oklch(21% 0.012 240);color:oklch(93% 0.004 240);padding-block:clamp(48px,7vw,72px)">
+  <div style="max-width:860px;margin:0 auto;padding-inline:clamp(24px,5vw,40px);display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center">
+    <div>
+      <h2 style="font-family:'Public Sans',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,42px);color:#fff;margin:0 0 8px">Tell me what's not converting.</h2>
+      <p style="margin:0;color:oklch(80% 0.004 240)">Happy to talk through this project in more depth.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="../Tabrez%20Zaidy%20Resume.dc.html#work" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:13px 22px;border:1px solid #fff;color:#fff" style-hover="background:#fff;color:oklch(21% 0.012 240)">More work</a>
+      <a href="mailto:tabrez.zaidy@gmail.com" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:13px 22px;border:1px solid oklch(42% 0.1 250);background:oklch(42% 0.1 250);color:#fff" style-hover="background:oklch(30% 0.09 250);border-color:oklch(30% 0.09 250)">Email me</a>
+    </div>
+  </div>
+</footer>
+
+<button onClick="{{ scrollToTop }}" aria-label="Scroll to top" style="{{ backToTopStyle }}" style-hover="background:oklch(42% 0.1 250);border-color:oklch(42% 0.1 250);color:#fff">&uarr;</button>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { visible: false };
+
+  componentDidMount() {
+    this._onScroll = () => this.setState({ visible: window.scrollY > 480 });
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  renderVals() {
+    return {
+      scrollToTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      backToTopStyle: `position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:oklch(21% 0.012 240);border:1px solid oklch(21% 0.012 240);color:#fff;font-size:18px;cursor:pointer;display:${this.state.visible ? 'flex' : 'none'};align-items:center;justify-content:center;box-shadow:0 10px 24px -12px rgba(14,31,46,.6);transition:background .18s,border-color .18s;z-index:50`
+    };
+  }
+}
+</script>
+</body>
+</html>

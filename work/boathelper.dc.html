@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>BoatHelper — A Two-Sided Marketplace for Boat Maintenance — Tabrez Zaidy</title>
+<meta name="description" content="Case study: BoatHelper, a mobile marketplace where boat owners post maintenance tasks and marine craftsmen bid, agree and get paid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#F5F4F0;color:#111111;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#111111;text-decoration:none}
+a:hover{color:#A6381F}
+:focus-visible{outline:2px solid #A6381F;outline-offset:3px}
+@keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes glowPulse{0%,100%{opacity:1}50%{opacity:.4}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div aria-hidden="true" style="position:fixed;top:0;left:0;right:0;height:2px;z-index:120"><span ref="{{ barRef }}" style="display:block;height:2px;background:#A6381F;width:0%"></span></div>
+
+<header style="position:sticky;top:0;z-index:100;background:rgba(245,244,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid #D9D8D3">
+  <nav aria-label="Primary" style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);height:64px;display:flex;align-items:center;gap:24px">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;margin-right:auto"><img src="../assets/zaidy-logo.png" alt="" style="height:18px;width:auto;display:block"><span style="font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase">Tabrez Zaidy</span></a>
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#6B6B6B" style-hover="color:#111">&larr; Back to Work</a>
+  </nav>
+</header>
+
+<main>
+<article>
+<section style="max-width:1520px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,40px) clamp(32px,4vw,52px);animation:heroUp .7s cubic-bezier(.22,1,.36,1) both">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 24px">Product Design · UX/UI · Marketplace · Mobile</p>
+  <h1 style="font-weight:800;font-size:clamp(38px,6.4vw,88px);line-height:.99;letter-spacing:-.035em;margin:0 0 26px;max-width:19ch;text-wrap:balance">BoatHelper: a marketplace for boat maintenance</h1>
+  <p style="font-size:clamp(18px,1.5vw,23px);line-height:1.6;color:#6B6B6B;margin:0 0 clamp(36px,5vw,56px);max-width:60ch">Boat owners need work done and have no idea what it should cost. Marine craftsmen need work and have no shopfront. BoatHelper is a mobile app that puts both sides on the same task.</p>
+  <dl style="margin:0 0 clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;border-top:1px solid #111;border-bottom:1px solid #D9D8D3;padding:22px 0;font-family:'JetBrains Mono',monospace;font-size:12px">
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Role</dt><dd style="margin:8px 0 0">Product Designer</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Tools</dt><dd style="margin:8px 0 0">Figma</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Platform</dt><dd style="margin:8px 0 0">iOS &amp; Android</dd></div>
+  </dl>
+  <div style="background:#fff;border:1px solid #D9D8D3;padding:clamp(18px,3vw,44px)">
+    <div style="background:#F5F4F0;border:1px solid #D9D8D3;padding:clamp(16px,2.5vw,34px);display:flex;gap:clamp(16px,3vw,34px);flex-wrap:wrap;justify-content:center">
+      <div style="width:252px;max-width:100%;border:8px solid #111;border-radius:28px;overflow:hidden;background:#fff">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:11px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Owner — home</span>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+            <div style="border:1px solid #D9D8D3;padding:8px"><span style="display:block;font-weight:800;font-size:18px;line-height:1">3</span><span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#6B6B6B">Open</span></div>
+            <div style="border:1px solid #A6381F;padding:8px;animation:floatY 3.6s ease-in-out infinite"><span style="display:block;font-weight:800;font-size:18px;line-height:1">1</span><span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#A6381F">In progress</span></div>
+            <div style="border:1px solid #D9D8D3;padding:8px"><span style="display:block;font-weight:800;font-size:18px;line-height:1">3</span><span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#6B6B6B">Done</span></div>
+          </div>
+          <div style="border:1px solid #D9D8D3;display:flex;gap:9px;padding:9px;align-items:center"><span style="width:52px;height:44px;background:#F5F4F0;border:1px solid #D9D8D3;flex:none"></span><div style="display:flex;flex-direction:column;gap:5px;flex:1"><span style="height:8px;width:66%;background:#111"></span><span style="height:6px;width:82%;background:#D9D8D3"></span><span style="height:6px;width:54%;background:#D9D8D3"></span></div></div>
+          <div style="border:1px solid #D9D8D3;padding:10px;display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Market activity</span>
+            <div style="display:flex;align-items:flex-end;gap:4px;height:44px">
+              <span style="flex:1;height:40%;background:#D9D8D3"></span><span style="flex:1;height:62%;background:#D9D8D3"></span><span style="flex:1;height:48%;background:#D9D8D3"></span><span style="flex:1;height:80%;background:#A6381F;animation:glowPulse 2.6s ease-in-out infinite"></span><span style="flex:1;height:56%;background:#D9D8D3"></span><span style="flex:1;height:68%;background:#D9D8D3"></span>
+            </div>
+          </div>
+          <span style="height:40px;background:#111"></span>
+        </div>
+      </div>
+      <div style="width:252px;max-width:100%;border:8px solid #111;border-radius:28px;overflow:hidden;background:#fff">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:10px;animation:floatY 4s ease-in-out .3s infinite">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Task — 3 offers</span>
+          <span style="height:10px;width:74%;background:#111"></span>
+          <span style="height:6px;width:94%;background:#D9D8D3"></span>
+          <div style="border:1px solid #A6381F;padding:10px;display:flex;flex-direction:column;gap:6px;animation:glowPulse 2.6s ease-in-out infinite"><div style="display:flex;justify-content:space-between;align-items:center"><span style="height:7px;width:44%;background:#111"></span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#A6381F">$320</span></div><span style="height:6px;width:70%;background:#D9D8D3"></span></div>
+          <div style="border:1px solid #D9D8D3;padding:10px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="height:7px;width:52%;background:#111"></span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">$410</span></div><span style="height:6px;width:60%;background:#D9D8D3"></span></div>
+          <div style="border:1px solid #D9D8D3;padding:10px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="height:7px;width:48%;background:#111"></span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">$465</span></div><span style="height:6px;width:66%;background:#D9D8D3"></span></div>
+          <span style="height:40px;background:#111;margin-top:4px"></span>
+        </div>
+      </div>
+      <div style="width:252px;max-width:100%;border:8px solid #111;border-radius:28px;overflow:hidden;background:#fff">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Agreement</span>
+          <div style="border:1px solid #D9D8D3;padding:11px;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between"><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Scope</span><span style="height:7px;width:44%;background:#111"></span></div>
+            <div style="display:flex;justify-content:space-between"><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Price</span><span style="height:7px;width:28%;background:#111"></span></div>
+            <div style="display:flex;justify-content:space-between"><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Dates</span><span style="height:7px;width:36%;background:#111"></span></div>
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;animation:floatY 4s ease-in-out .5s infinite"><span style="width:8px;height:8px;border-radius:50%;background:#A6381F;flex:none;animation:glowPulse 2.6s ease-in-out infinite"></span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Both parties confirmed</span></div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-top:2px"><span style="height:26px;width:76%;background:#F5F4F0;border:1px solid #D9D8D3"></span><span style="height:26px;width:66%;background:#111;align-self:flex-end"></span><span style="height:26px;width:58%;background:#F5F4F0;border:1px solid #D9D8D3"></span></div>
+          <span style="height:34px;background:#F5F4F0;border:1px solid #D9D8D3;margin-top:4px"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="margin:20px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6B6B6B">Scroll to explore &darr;</p>
+</section>
+
+<nav aria-label="Case study sections" style="position:sticky;top:64px;z-index:90;background:rgba(245,244,240,.92);backdrop-filter:blur(10px);border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;gap:22px;overflow-x:auto;height:52px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11.5px">
+    <a href="#overview" data-sec="overview" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Overview</a>
+    <a href="#challenge" data-sec="challenge" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Challenge</a>
+    <a href="#structure" data-sec="structure" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Structure</a>
+    <a href="#design" data-sec="design" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Design</a>
+    <a href="#system" data-sec="system" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">System</a>
+    <a href="#outcome" data-sec="outcome" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Outcome</a>
+    <a href="https://www.figma.com/design/oUJEBmsD8llShcLS9l2RHd/BoatHelper?node-id=0-1&t=Ldj0Xokz5V21zG6Y-1" target="_blank" rel="noopener" style="margin-left:auto;flex:none;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:10px 16px;background:#A6381F;border:1px solid #A6381F;color:#F5F4F0" style-hover="background:#111;border-color:#111;color:#F5F4F0">View on Figma &#8599;</a>
+  </div>
+</nav>
+
+<section id="overview" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px);display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,2fr);gap:clamp(32px,5vw,72px)">
+  <div>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">01 — Overview</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0;max-width:20ch">Two audiences, one object: the task</h2>
+  </div>
+  <div style="max-width:60ch">
+    <p style="font-size:17.5px;line-height:1.75;margin:0 0 16px">An owner posts a job against a specific boat — engine, painting, varnishing, electrical. Craftsmen in range see it, send offers, and one is accepted into an agreement. Work runs, messages stay attached to the job, the task closes.</p>
+    <p style="font-size:17.5px;line-height:1.75;color:#6B6B6B;margin:0">Scope: owner home, boat profiles, task creation, task and offer listings, craftsman and owner profiles, agreements, chat for both sides, and market pricing.</p>
+  </div>
+
+  <div style="grid-column:1/-1;border-top:1px solid #D9D8D3;padding-top:clamp(28px,4vw,44px);margin-top:clamp(12px,2vw,20px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 20px">Designed for</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(18px,2.5vw,28px)">
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Diane, 51</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Boat owner, weekend sailor</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> get a fair quote for engine work without calling five marinas.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> no visibility into who is qualified or what a job like hers should cost.</p>
+    </div>
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Reuben, 38</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Marine maintenance craftsman</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> fill slow weeks with nearby jobs he can quote with confidence.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> no shopfront — work comes from word of mouth alone.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="challenge" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">02 — Challenge</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:26ch">Nobody trusts a price they cannot compare</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Price opacity</p><p style="margin:0;font-size:15.5px;line-height:1.7">Quotes for the same hull job can differ by hundreds. Owners had no reference point before posting.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Vague briefs</p><p style="margin:0;font-size:15.5px;line-height:1.7">A one-line request produces guesswork offers, which forces a second round of messages.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Two-sided empty state</p><p style="margin:0;font-size:15.5px;line-height:1.7">Craftsmen leave without tasks; owners leave without offers. Both sides need to feel activity on day one.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Commitment</p><p style="margin:0;font-size:15.5px;line-height:1.7">Accepting an offer is a money decision made on a phone. It needs a moment of its own, not a button in a list.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="structure" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">03 — Structure</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">Status is the spine of the whole product</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:clamp(32px,4vw,52px)">
+    <div style="flex:1 1 150px;border:1px solid #A6381F;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">01</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Boat</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Type, length, year — added once, reused forever</p></div>
+    <div style="flex:1 1 150px;border:1px solid #A6381F;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">02</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Task</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Category, description, photos, location</p></div>
+    <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">03</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Offers</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Price, timeline, craftsman rating side by side</p></div>
+    <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">04</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Agreement</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Scope, price and dates confirmed by both</p></div>
+    <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">05</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Done</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Completion, review, history on the boat</p></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+    <div style="background:#F5F4F0;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 10px">Before</p><p style="margin:0;font-size:16px;line-height:1.7">Posting blind and hoping a fair number comes back</p></div>
+    <div style="background:#fff;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 10px">After</p><p style="margin:0;font-size:16px;line-height:1.7">Market averages shown before the task is written</p></div>
+    <div style="background:#F5F4F0;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 10px">Before</p><p style="margin:0;font-size:16px;line-height:1.7">Offers arriving as separate messages</p></div>
+    <div style="background:#fff;padding:24px"><p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 10px">After</p><p style="margin:0;font-size:16px;line-height:1.7">One comparable list, then one deliberate acceptance</p></div>
+  </div>
+</section>
+
+<section id="design" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">04 — Design decisions</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">Three decisions carried most of the product</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(24px,3vw,44px);margin-bottom:clamp(40px,5vw,72px)">
+      <div>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 12px">01 — Market data on the home screen</p>
+        <p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Active task count, average task price and a six-month price trend by category sit above the fold for owners. It sets expectations before anyone types a number, and it proves the market is alive to a craftsman deciding whether to stay.</p>
+      </div>
+      <div>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 12px">02 — Category before description</p>
+        <p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Task creation asks for the category first, then shapes the prompts and photo guidance around it. An engine job and a varnishing job need different evidence, and asking for it up front removes a round trip.</p>
+      </div>
+      <div>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#A6381F;margin:0 0 12px">03 — The agreement is a screen</p>
+        <p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Accepting an offer opens a page that restates scope, price and dates and needs confirmation from both sides. Everything after it — chat, progress, completion — hangs off that record.</p>
+      </div>
+    </div>
+    <figure style="margin:0 0 clamp(40px,5vw,72px)">
+      <div style="background:#F5F4F0;border:1px solid #D9D8D3;padding:clamp(16px,2.4vw,34px);display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(16px,2vw,24px)">
+        <div style="background:#fff;border:1px solid #D9D8D3;padding:20px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Open · awaiting offers</span><span style="height:11px;width:58%;background:#111"></span><span style="height:7px;width:90%;background:#D9D8D3"></span><span style="height:7px;width:72%;background:#D9D8D3"></span><div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Sea Breeze</span><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#A6381F">3 offers &rarr;</span></div></div>
+        <div style="background:#fff;border:1px solid #A6381F;padding:20px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">In progress · agreed</span><span style="height:11px;width:64%;background:#111"></span><span style="height:7px;width:84%;background:#D9D8D3"></span><span style="height:7px;width:66%;background:#D9D8D3"></span><div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Sea Breeze</span><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#A6381F">Open chat &rarr;</span></div></div>
+        <div style="background:#fff;border:1px solid #D9D8D3;padding:20px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Done · reviewed</span><span style="height:11px;width:52%;background:#111"></span><span style="height:7px;width:78%;background:#D9D8D3"></span><span style="height:7px;width:60%;background:#D9D8D3"></span><div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Sea Breeze</span><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">View record</span></div></div>
+      </div>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">One task card, three states. The same component carries the job from post to history.</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <div style="background:#F5F4F0;border:1px solid #D9D8D3;padding:clamp(16px,2.5vw,36px);display:flex;gap:clamp(16px,3vw,40px);flex-wrap:wrap;justify-content:center">
+        <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#fff">
+          <div style="height:22px;background:#111"></div>
+          <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#A6381F">Create task · step 1</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-family:'JetBrains Mono',monospace;font-size:9px;padding:6px 9px;background:#111;color:#F5F4F0">Engine</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;padding:6px 9px;border:1px solid #D9D8D3;color:#6B6B6B">Painting</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;padding:6px 9px;border:1px solid #D9D8D3;color:#6B6B6B">Varnishing</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;padding:6px 9px;border:1px solid #D9D8D3;color:#6B6B6B">Other</span></div>
+            <span style="height:64px;background:#F5F4F0;border:1px solid #D9D8D3"></span>
+            <div style="display:flex;gap:6px"><span style="flex:1;height:44px;background:#F5F4F0;border:1px dashed #D9D8D3"></span><span style="flex:1;height:44px;background:#F5F4F0;border:1px dashed #D9D8D3"></span></div>
+            <span style="height:46px;background:#111;margin-top:4px"></span>
+          </div>
+        </div>
+        <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#fff">
+          <div style="height:22px;background:#111"></div>
+          <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Craftsman profile</span>
+            <div style="display:flex;gap:9px;align-items:center"><span style="width:44px;height:44px;border-radius:50%;background:#F5F4F0;border:1px solid #D9D8D3;flex:none"></span><div style="display:flex;flex-direction:column;gap:5px;flex:1"><span style="height:8px;width:70%;background:#111"></span><span style="height:6px;width:50%;background:#D9D8D3"></span><span style="font-family:'JetBrains Mono',monospace;font-size:8.5px;color:#A6381F">5.0 · 48 reviews</span></div></div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px"><span style="aspect-ratio:1;background:#F5F4F0;border:1px solid #D9D8D3"></span><span style="aspect-ratio:1;background:#F5F4F0;border:1px solid #D9D8D3"></span><span style="aspect-ratio:1;background:#F5F4F0;border:1px solid #D9D8D3"></span></div>
+            <span style="height:6px;width:86%;background:#D9D8D3"></span>
+            <span style="height:6px;width:64%;background:#D9D8D3"></span>
+            <div style="display:flex;gap:6px;margin-top:4px"><span style="flex:1;height:40px;background:#111"></span><span style="flex:1;height:40px;background:#F5F4F0;border:1px solid #111"></span></div>
+          </div>
+        </div>
+        <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#fff">
+          <div style="height:22px;background:#111"></div>
+          <div style="padding:14px;display:flex;flex-direction:column;gap:9px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Chat · attached to task</span>
+            <div style="border:1px solid #D9D8D3;padding:8px;display:flex;flex-direction:column;gap:4px"><span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:#A6381F">Engine maintenance</span><span style="height:6px;width:60%;background:#D9D8D3"></span></div>
+            <span style="height:28px;width:72%;background:#F5F4F0;border:1px solid #D9D8D3"></span>
+            <span style="height:36px;width:64%;background:#111;align-self:flex-end"></span>
+            <span style="height:28px;width:56%;background:#F5F4F0;border:1px solid #D9D8D3"></span>
+            <span style="height:28px;width:68%;background:#111;align-self:flex-end"></span>
+            <span style="height:38px;background:#F5F4F0;border:1px solid #D9D8D3;margin-top:4px"></span>
+          </div>
+        </div>
+      </div>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">Task creation, craftsman profile and task-scoped chat. Targets stay at 44px minimum throughout.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="system" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">05 — System</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">A small component set doing a lot of work</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Product palette</p>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#0A66C2;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#0A66C2 &nbsp;primary</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#FEDD08;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#FEDD08 &nbsp;rating</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#2CC20A;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#2CC20A &nbsp;in progress</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#D63838;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#D63838 &nbsp;engine</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:28px;background:#F5F7F9;border:1px solid #D9D8D3;flex:none"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px">#F5F7F9 &nbsp;surface</span></div>
+      </div>
+    </div>
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Typography</p>
+      <p style="margin:0 0 10px;font-weight:800;font-size:30px;line-height:1;letter-spacing:-.02em">Nunito Sans</p>
+      <p style="margin:0 0 8px;font-size:15.5px;line-height:1.6;color:#111">24 / 18 / 16 / 14 / 12 / 10 — six sizes, three weights.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.6;color:#6B6B6B">Rounded, high x-height, legible in sunlight on a dock.</p>
+    </div>
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Status &amp; category</p>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid #D9D8D3;padding:6px 10px;color:#6B6B6B">Open</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:#A6381F;color:#fff;padding:6px 10px">In progress</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid #111;padding:6px 10px">Done</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border:1px solid #D9D8D3;padding:6px 10px;color:#6B6B6B">Engine</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border:1px solid #D9D8D3;padding:6px 10px;color:#6B6B6B">Painting</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border:1px solid #D9D8D3;padding:6px 10px;color:#6B6B6B">Varnishing</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border:1px solid #D9D8D3;padding:6px 10px;color:#6B6B6B">Electricals</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;border:1px solid #D9D8D3;padding:6px 10px;color:#6B6B6B">Other</span>
+      </div>
+      <p style="margin:16px 0 0;font-size:14.5px;line-height:1.6;color:#6B6B6B">Status is a shared token, so a task reads the same in a list, a card and a notification.</p>
+    </div>
+    <div style="background:#fff;padding:26px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 18px">Component set</p>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15.5px;color:#111"><li>Task snippet — 7 variants</li><li>Category chip — 5 variants</li><li>Status badge — 4 variants</li><li>Boat snippet, offer card, profile header</li><li>Chat bubble, tab bar, icon set</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="outcome" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">06 — Outcome &amp; learnings</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">A marketplace is judged on completed jobs</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3;margin-bottom:clamp(32px,4vw,52px)">
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Tasks receiving an offer</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">More tasks got a first offer instead of sitting open with no response.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Time to first offer</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">Owners heard back faster once market pricing set clear expectations.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Agreements reaching done</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">More agreements closed instead of stalling after the quote stage.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px)">
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What worked</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Putting market pricing on the home screen changed the tone of the whole app. Owners stopped treating offers as a negotiation trap and started treating them as a comparison.</p></div>
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What I would change</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">The craftsman side deserves its own dashboard rather than a mirror of the owner's. Their day is about pipeline and travel radius, not boats.</p></div>
+    </div>
+  </div>
+</section>
+
+<nav aria-label="Case study navigation" style="background:#111;color:#F5F4F0">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:center">
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#B5B5AF" style-hover="color:#F5F4F0">&larr; Back to Work</a>
+    <a href="ecommerce.dc.html" style="justify-self:end;text-align:right;color:#F5F4F0" style-hover="color:#C8633F">
+      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85;margin-bottom:8px">Next project</span>
+      <span style="display:block;font-weight:800;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em">E-commerce Experience &rarr;</span>
+    </a>
+  </div>
+</nav>
+</article>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  barRef = React.createRef();
+  componentDidMount() {
+    this.p = 0;
+    this.onScroll = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const p = h > 0 ? Math.min(100, Math.round((window.scrollY / h) * 100)) : 0;
+      if (p === this.p) return;
+      this.p = p;
+      if (this.barRef.current) this.barRef.current.style.width = p + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+      this.io = io;
+    } else {
+      document.querySelectorAll('.rv').forEach((el) => el.classList.add('in'));
+    }
+    this.secLinks = Array.from(document.querySelectorAll('nav[aria-label="Case study sections"] a[data-sec]'));
+    if (this.secLinks.length) {
+      const setActive = (id) => {
+        this.secLinks.forEach((a) => {
+          const on = a.dataset.sec === id;
+          a.style.background = on ? '#A6381F' : 'transparent';
+          a.style.color = on ? '#F5F4F0' : '#6B6B6B';
+        });
+      };
+      this.visibleSecIds = new Set();
+      const updateActive = () => {
+        const order = this.secLinks.map((a) => a.dataset.sec);
+        for (let i = order.length - 1; i >= 0; i--) {
+          if (this.visibleSecIds.has(order[i])) { setActive(order[i]); return; }
+        }
+      };
+      const secIO = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) this.visibleSecIds.add(e.target.id); else this.visibleSecIds.delete(e.target.id); });
+        updateActive();
+      }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
+      this.secLinks.forEach((a) => { const sec = document.getElementById(a.dataset.sec); if (sec) secIO.observe(sec); });
+      this.secIO = secIO;
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); if (this.io) this.io.disconnect(); if (this.secIO) this.secIO.disconnect(); }
+  renderVals() { return { barRef: this.barRef }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>A Private Telehealth Flow for ED Treatment — Tabrez Zaidy</title>
+<meta name="description" content="Case study: designing an assessment-to-prescription telehealth flow for a sensitive condition, balancing discretion, trust and medical clarity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#F5F4F0;color:#111111;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#111111;text-decoration:none}
+a:hover{color:#A6381F}
+:focus-visible{outline:2px solid #A6381F;outline-offset:3px}
+@keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes glowPulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes progressFill{0%,100%{width:33%}50%{width:58%}}
+@keyframes optionCycle{0%,28%{border-color:#111;border-width:2px}32%,100%{border-color:#D9D8D3;border-width:1px}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div aria-hidden="true" style="position:fixed;top:0;left:0;right:0;height:2px;background:transparent;z-index:120"><span ref="{{ barRef }}" style="display:block;height:2px;background:#A6381F;width:0%"></span></div>
+
+<header style="position:sticky;top:0;z-index:100;background:rgba(245,244,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid #D9D8D3">
+  <nav aria-label="Primary" style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);height:64px;display:flex;align-items:center;gap:24px">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;margin-right:auto">
+      <img src="../assets/zaidy-logo.png" alt="" style="height:18px;width:auto;display:block">
+      <span style="font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase">Tabrez Zaidy</span>
+    </a>
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#6B6B6B" style-hover="color:#111">&larr; Back to Work</a>
+  </nav>
+</header>
+
+<main>
+<article>
+<section style="max-width:1520px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,40px) clamp(32px,4vw,52px);animation:heroUp .7s cubic-bezier(.22,1,.36,1) both">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 24px">UX/UI · Healthcare · Telehealth · D2C</p>
+  <h1 style="font-weight:800;font-size:clamp(38px,6.4vw,88px);line-height:.99;letter-spacing:-.035em;margin:0 0 26px;max-width:22ch;text-wrap:balance">A Private Telehealth Flow for ED Treatment</h1>
+  <p style="font-size:clamp(18px,1.5vw,23px);line-height:1.6;color:#6B6B6B;margin:0 0 clamp(36px,5vw,56px);max-width:58ch">A platform for treating a condition most people don't want to talk about: an online medical assessment, a licensed provider's review, and treatment delivered without a waiting room.</p>
+  <dl style="margin:0 0 clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;border-top:1px solid #111;border-bottom:1px solid #D9D8D3;padding:22px 0;font-family:'JetBrains Mono',monospace;font-size:12px">
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Role</dt><dd style="margin:8px 0 0">UX/UI Designer</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Tools</dt><dd style="margin:8px 0 0">Figma</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Platform</dt><dd style="margin:8px 0 0">Responsive web</dd></div>
+  </dl>
+  <div style="background:#fff;border:1px solid #D9D8D3">
+    <div style="display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid #D9D8D3">
+      <span style="width:9px;height:9px;border-radius:50%;background:#D9D8D3"></span>
+      <span style="width:9px;height:9px;border-radius:50%;background:#D9D8D3"></span>
+      <span style="width:9px;height:9px;border-radius:50%;background:#D9D8D3"></span>
+      <span style="margin-left:14px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B">ed assessment — step 3 of 9</span>
+    </div>
+    <div style="max-width:440px;margin:0 auto;padding:clamp(32px,5vw,56px) clamp(20px,3vw,28px);display:flex;flex-direction:column;gap:18px">
+      <span style="height:4px;width:100%;background:#EFEEEA;border-radius:2px;position:relative"><span style="position:absolute;left:0;top:0;height:4px;background:#111;border-radius:2px;animation:progressFill 4.5s ease-in-out infinite"></span></span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Question 3 of 9</span>
+      <span style="height:20px;width:92%;background:#111;margin-top:2px"></span>
+      <span style="height:20px;width:64%;background:#111"></span>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <span style="height:48px;border:1px solid #D9D8D3;animation:optionCycle 5.4s ease-in-out infinite"></span>
+        <span style="height:48px;border:2px solid #111;animation:optionCycle 5.4s ease-in-out -1.8s infinite"></span>
+        <span style="height:48px;border:1px solid #D9D8D3;animation:optionCycle 5.4s ease-in-out -3.6s infinite"></span>
+      </div>
+      <span style="margin-top:10px;height:50px;background:#111;animation:glowPulse 2.6s ease-in-out infinite"></span>
+    </div>
+  </div>
+  <p style="margin:20px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6B6B6B">Scroll to explore &darr;</p>
+</section>
+
+<nav aria-label="Case study sections" style="position:sticky;top:64px;z-index:90;background:rgba(245,244,240,.92);backdrop-filter:blur(10px);border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;gap:22px;overflow-x:auto;height:52px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11.5px">
+    <a href="#overview" data-sec="overview" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Overview</a>
+    <a href="#challenge" data-sec="challenge" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Challenge</a>
+    <a href="#research" data-sec="research" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Research</a>
+    <a href="#process" data-sec="process" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Process</a>
+    <a href="#design" data-sec="design" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Design</a>
+    <a href="#outcome" data-sec="outcome" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Outcome</a>
+    <a href="https://www.figma.com/design/chvZEEyyhAmcwIifpIss4u/ED-pills-TZ?node-id=0-1&t=UjNG8ck2SbpdKlGf-1" target="_blank" rel="noopener" style="margin-left:auto;flex:none;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:10px 16px;background:#A6381F;border:1px solid #A6381F;color:#F5F4F0" style-hover="background:#111;border-color:#111;color:#F5F4F0">View on Figma &#8599;</a>
+  </div>
+</nav>
+
+<section id="overview" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px);display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,2fr);gap:clamp(32px,5vw,72px)">
+  <div>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">01 — Overview</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0;max-width:20ch">Medicine that has to feel private before it feels medical</h2>
+  </div>
+  <div>
+    <p style="font-size:17.5px;line-height:1.75;margin:0 0 16px">The platform takes someone from a free online assessment to a licensed provider's review to a prescription treatment delivered to their door, without ever requiring a clinic visit. It also covers a second condition, hair loss, on the same underlying flow.</p>
+    <p style="font-size:17.5px;line-height:1.75;color:#6B6B6B;margin:0">My scope covered the marketing landing pages, the medical intake assessment, treatment and dosage selection, checkout, and the account dashboard where a customer manages refills and messages their provider.</p>
+  </div>
+
+  <div style="grid-column:1/-1;border-top:1px solid #D9D8D3;padding-top:clamp(28px,4vw,44px);margin-top:clamp(12px,2vw,20px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 20px">Designed for</p>
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff;max-width:520px">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">A first-time patient</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Researching alone, likely on a phone, likely at night</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> find out if this is legitimate and get treatment without talking to anyone in person.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> most sites either over-explain the condition in clinical language or hide behind vague marketing that answers nothing.</p>
+    </div>
+  </div>
+</section>
+
+<section id="challenge" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">02 — Challenge</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:26ch">Discretion and medical credibility, at the same time</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Tone</p><p style="margin:0;font-size:15.5px;line-height:1.7">Too clinical reads cold; too soft reads like it isn't real medicine.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Intake length</p><p style="margin:0;font-size:15.5px;line-height:1.7">A real medical history needs many questions; a long form loses people before question three.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Trust</p><p style="margin:0;font-size:15.5px;line-height:1.7">No in-person doctor and no physical storefront to point to as proof this is legitimate.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Discretion</p><p style="margin:0;font-size:15.5px;line-height:1.7">Packaging, billing descriptors and account language all needed to stay unremarkable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">03 — Research &amp; insights</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:22ch">What made people trust an intake form</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
+    <ol style="margin:0;padding:0;list-style:none">
+      <li style="border-top:1px solid #111;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">01</span><p style="margin:0;font-size:16.5px;line-height:1.7">One question per screen made a long medical history feel like a conversation instead of a form.</p></li>
+      <li style="border-top:1px solid #D9D8D3;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">02</span><p style="margin:0;font-size:16.5px;line-height:1.7">A visible progress bar mattered more than the actual length — people tolerate more steps once they can see the end.</p></li>
+      <li style="border-top:1px solid #D9D8D3;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">03</span><p style="margin:0;font-size:16.5px;line-height:1.7">Naming the provider who reviews the assessment, before asking for payment, did more for trust than any testimonial.</p></li>
+      <li style="border-top:1px solid #D9D8D3;border-bottom:1px solid #D9D8D3;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">04</span><p style="margin:0;font-size:16.5px;line-height:1.7">Plain, muted colour read as more discreet than the bright clinical blue most competitors used.</p></li>
+    </ol>
+    <blockquote style="margin:0;background:rgb(53,75,69);color:rgb(243,234,218);padding:clamp(28px,4vw,44px)">
+      <p style="margin:0 0 16px;font-weight:700;font-size:clamp(21px,2.4vw,30px);line-height:1.3;letter-spacing:-.02em">"I wanted to know a real doctor was going to read this before I answered anything personal."</p>
+      <footer style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(243,234,218,.6)">Paraphrased from user interviews</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="process" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">04 — Flow</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">From landing page to a package at the door</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:stretch">
+      <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">Step 01</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Land</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Condition explained plainly, assessment framed as free</p></div>
+      <div style="flex:1 1 150px;border:1px solid #A6381F;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">Step 02</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Assess</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">One question per screen, progress always visible</p></div>
+      <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">Step 03</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Review</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">A licensed provider reads the assessment</p></div>
+      <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">Step 04</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Treat</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Treatment and dosage selected, subscription set up</p></div>
+      <div style="flex:1 1 150px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">Step 05</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Manage</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Dashboard for refills, messages and address</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="design" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px) 0">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">05 — Interface</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">How the key screens were structured</h2>
+
+  <figure style="margin:0 0 clamp(40px,5vw,72px)">
+    <div style="background:rgb(53,75,69);border-radius:4px;padding:clamp(16px,2.5vw,36px);display:flex;gap:clamp(16px,3vw,40px);flex-wrap:wrap;justify-content:center">
+      <div style="width:250px;max-width:100%;border-radius:16px;overflow:hidden;background:#fff">
+        <div style="height:40px;background:rgb(53,75,69);display:flex;align-items:center;justify-content:space-between;padding:0 14px"><span style="height:6px;width:30%;background:rgb(243,234,218)"></span><span style="width:16px;height:16px;border-radius:50%;background:rgb(178,97,46)"></span></div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:10px">
+          <span style="height:3px;width:100%;background:#EFEEEA;border-radius:2px;position:relative"><span style="position:absolute;left:0;top:0;height:3px;width:35%;background:rgb(178,97,46);border-radius:2px"></span></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B;margin-top:4px">Question 3 of 9</span>
+          <span style="height:11px;width:88%;background:#111;margin-top:2px"></span>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
+            <span style="height:36px;border:1px solid #D9D8D3;border-radius:8px"></span>
+            <span style="height:36px;border:2px solid rgb(178,97,46);border-radius:8px;background:rgba(178,97,46,.06)"></span>
+            <span style="height:36px;border:1px solid #D9D8D3;border-radius:8px"></span>
+          </div>
+          <span style="height:38px;background:rgb(178,97,46);border-radius:8px;margin-top:6px;animation:glowPulse 2.6s ease-in-out infinite"></span>
+        </div>
+      </div>
+      <div style="width:250px;max-width:100%;border-radius:16px;overflow:hidden;background:#fff">
+        <div style="height:40px;background:rgb(53,75,69);display:flex;align-items:center;padding:0 14px"><span style="height:6px;width:36%;background:rgb(243,234,218)"></span></div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgb(178,97,46)">Recommended for you</span>
+          <div style="border:2px solid rgb(178,97,46);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:6px;animation:floatY 3.6s ease-in-out infinite"><span style="height:8px;width:60%;background:#111"></span><span style="height:6px;width:40%;background:#6B6B6B"></span></div>
+          <div style="border:1px solid #D9D8D3;border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:6px;animation:floatY 3.6s ease-in-out .2s infinite"><span style="height:8px;width:52%;background:#111"></span><span style="height:6px;width:36%;background:#6B6B6B"></span></div>
+          <span style="height:38px;background:rgb(178,97,46);border-radius:8px;margin-top:4px"></span>
+        </div>
+      </div>
+      <div style="width:250px;max-width:100%;border-radius:16px;overflow:hidden;background:#fff">
+        <div style="height:40px;background:rgb(53,75,69);display:flex;align-items:center;padding:0 14px"><span style="height:6px;width:30%;background:rgb(243,234,218)"></span></div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:9px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Next shipment</span>
+          <div style="border:1px solid #D9D8D3;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center"><span style="height:7px;width:44%;background:#111"></span><span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgb(178,97,46)">Manage</span></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B;margin-top:4px">Messages</span>
+          <div style="border:1px solid #D9D8D3;border-radius:8px;padding:10px;display:flex;gap:8px;align-items:center"><span style="width:22px;height:22px;border-radius:50%;background:rgb(53,75,69);flex:none"></span><span style="height:6px;flex:1;background:#D9D8D3"></span></div>
+        </div>
+      </div>
+    </div>
+    <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">Assessment step, treatment recommendation, and the account dashboard.</figcaption>
+  </figure>
+</section>
+
+<section class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px)">
+    <div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">06 — Design system</p>
+      <h2 style="font-weight:800;font-size:clamp(26px,3.2vw,40px);line-height:1.05;letter-spacing:-.025em;margin:0 0 18px;max-width:20ch">A palette built to read as discreet</h2>
+      <p style="font-size:16.5px;line-height:1.75;color:#6B6B6B;margin:0;max-width:48ch">A deep green and warm terracotta on a cream ground, away from the bright clinical blue most competitors default to. The same tokens carry both the ED and hair loss product lines.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3;align-self:start">
+      <div style="background:#fff;padding:20px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Deep green</span><span style="display:block;height:38px;margin-top:10px;background:rgb(53,75,69)"></span></div>
+      <div style="background:#fff;padding:20px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Terracotta</span><span style="display:block;height:38px;margin-top:10px;background:rgb(178,97,46)"></span></div>
+      <div style="background:#fff;padding:20px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Cream</span><span style="display:block;height:38px;margin-top:10px;background:rgb(243,234,218);border:1px solid #D9D8D3"></span></div>
+      <div style="background:#fff;padding:20px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Ink</span><span style="display:block;height:38px;margin-top:10px;background:rgb(30,30,30)"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="outcome" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">07 — Outcome</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:22ch">What changed for patients</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px)">
+    <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What worked</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Breaking the assessment into one question per screen, with the provider named up front, turned a form that felt like paperwork into something people were willing to finish.</p></div>
+    <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What I would change</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">The dashboard was designed after the acquisition flow shipped. Designed alongside it, refills and provider messaging could have shared more of the same patterns.</p></div>
+  </div>
+</section>
+
+<nav aria-label="Case study navigation" style="background:#111;color:#F5F4F0">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:center">
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#B5B5AF" style-hover="color:#F5F4F0">&larr; Back to Work</a>
+    <a href="online-pharmacy.dc.html" style="justify-self:end;text-align:right;color:#F5F4F0" style-hover="color:#C8633F">
+      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85;margin-bottom:8px">Next project</span>
+      <span style="display:block;font-weight:800;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em">Reimagining the Online Pharmacy Experience &rarr;</span>
+    </a>
+  </div>
+</nav>
+</article>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  barRef = React.createRef();
+  componentDidMount() {
+    this.p = 0;
+    this.onScroll = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const p = h > 0 ? Math.min(100, Math.round((window.scrollY / h) * 100)) : 0;
+      if (p === this.p) return;
+      this.p = p;
+      if (this.barRef.current) this.barRef.current.style.width = p + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+      this.io = io;
+    } else {
+      document.querySelectorAll('.rv').forEach((el) => el.classList.add('in'));
+    }
+    this.secLinks = Array.from(document.querySelectorAll('nav[aria-label="Case study sections"] a[data-sec]'));
+    if (this.secLinks.length) {
+      const setActive = (id) => {
+        this.secLinks.forEach((a) => {
+          const on = a.dataset.sec === id;
+          a.style.background = on ? '#A6381F' : 'transparent';
+          a.style.color = on ? '#F5F4F0' : '#6B6B6B';
+        });
+      };
+      this.visibleSecIds = new Set();
+      const updateActive = () => {
+        const order = this.secLinks.map((a) => a.dataset.sec);
+        for (let i = order.length - 1; i >= 0; i--) {
+          if (this.visibleSecIds.has(order[i])) { setActive(order[i]); return; }
+        }
+      };
+      const secIO = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) this.visibleSecIds.add(e.target.id); else this.visibleSecIds.delete(e.target.id); });
+        updateActive();
+      }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
+      this.secLinks.forEach((a) => { const sec = document.getElementById(a.dataset.sec); if (sec) secIO.observe(sec); });
+      this.secIO = secIO;
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); if (this.io) this.io.disconnect(); if (this.secIO) this.secIO.disconnect(); }
+  renderVals() { return { barRef: this.barRef }; }
+}
+</script>
+</body>
+</html>

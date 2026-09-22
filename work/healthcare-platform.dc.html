@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Simplifying Complex Healthcare Operations — Tabrez Zaidy</title>
+<meta name="description" content="Case study: turning complex healthcare workflows — patients, care tasks, scheduling and routes — into clearer operational experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#F5F4F0;color:#111111;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#111111;text-decoration:none}
+a:hover{color:#A6381F}
+:focus-visible{outline:2px solid #A6381F;outline-offset:3px}
+@keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes glowPulse{0%,100%{opacity:1}50%{opacity:.4}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div aria-hidden="true" style="position:fixed;top:0;left:0;right:0;height:2px;z-index:120"><span ref="{{ barRef }}" style="display:block;height:2px;background:#A6381F;width:0%"></span></div>
+
+<header style="position:sticky;top:0;z-index:100;background:rgba(245,244,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid #D9D8D3">
+  <nav aria-label="Primary" style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);height:64px;display:flex;align-items:center;gap:24px">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px;margin-right:auto"><img src="../assets/zaidy-logo.png" alt="" style="height:18px;width:auto;display:block"><span style="font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase">Tabrez Zaidy</span></a>
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#6B6B6B" style-hover="color:#111">← Back to Work</a>
+  </nav>
+</header>
+
+<main>
+<article>
+<section style="max-width:1520px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,40px) clamp(32px,4vw,52px);animation:heroUp .7s cubic-bezier(.22,1,.36,1) both">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 24px">Product Design · UX/UI · Healthcare · SaaS</p>
+  <h1 style="font-weight:800;font-size:clamp(38px,6.4vw,88px);line-height:.99;letter-spacing:-.035em;margin:0 0 26px;max-width:20ch;text-wrap:balance">Simplifying Complex Healthcare Operations</h1>
+  <p style="font-size:clamp(18px,1.5vw,23px);line-height:1.6;color:#6B6B6B;margin:0 0 clamp(36px,5vw,56px);max-width:58ch">Care coordinators were running patients, tasks, schedules and field routes across disconnected screens. The platform was restructured around the day they actually work through.</p>
+  <dl style="margin:0 0 clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;border-top:1px solid #111;border-bottom:1px solid #D9D8D3;padding:22px 0;font-family:'JetBrains Mono',monospace;font-size:12px">
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Role</dt><dd style="margin:8px 0 0">Product Designer</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Tools</dt><dd style="margin:8px 0 0">Figma, Jira</dd></div>
+    <div><dt style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B6B">Platform</dt><dd style="margin:8px 0 0">Web app + mobile</dd></div>
+  </dl>
+  <div style="background:#111;padding:clamp(18px,3vw,44px)">
+    <div style="background:#1A1A17;border:1px solid #3A3A36;padding:clamp(16px,2.4vw,30px);display:flex;gap:clamp(14px,2vw,22px);flex-wrap:wrap">
+      <div style="flex:1 1 150px;display:flex;flex-direction:column;gap:10px">
+        <span style="height:9px;width:54%;background:#5C5C56"></span>
+        <span style="height:34px;background:#A6381F"></span>
+        <span style="height:34px;background:#111;border:1px solid #3A3A36"></span>
+        <span style="height:34px;background:#111;border:1px solid #3A3A36"></span>
+        <span style="height:34px;background:#111;border:1px solid #3A3A36"></span>
+        <span style="height:34px;background:#111;border:1px solid #3A3A36"></span>
+      </div>
+      <div style="flex:3 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px">
+          <div style="background:#111;border:1px solid #3A3A36;padding:16px;animation:floatY 3.6s ease-in-out infinite"><span style="display:block;font-weight:800;font-size:26px;color:#F5F4F0;letter-spacing:-.02em">18</span><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#8A8A85">Open care tasks</span></div>
+          <div style="background:#111;border:1px solid #3A3A36;padding:16px;animation:floatY 3.6s ease-in-out .2s infinite"><span style="display:block;font-weight:800;font-size:26px;color:#F5F4F0;letter-spacing:-.02em">42</span><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#8A8A85">Active patients</span></div>
+          <div style="background:#111;border:1px solid #3A3A36;padding:16px;animation:floatY 3.6s ease-in-out .4s infinite"><span style="display:block;font-weight:800;font-size:26px;color:#F5F4F0;letter-spacing:-.02em">7</span><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#8A8A85">Routes today</span></div>
+          <div style="background:#111;border:1px solid #3A3A36;padding:16px;animation:glowPulse 2.6s ease-in-out infinite"><span style="display:block;font-weight:800;font-size:26px;color:#C8633F;letter-spacing:-.02em">2</span><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#8A8A85">Escalations</span></div>
+        </div>
+        <div style="background:#111;border:1px solid #3A3A36;padding:18px;height:150px;display:flex;align-items:flex-end;gap:8px">
+          <span style="flex:1;height:34%;background:#3A3A36"></span><span style="flex:1;height:58%;background:#3A3A36"></span><span style="flex:1;height:46%;background:#3A3A36"></span><span style="flex:1;height:82%;background:#A6381F;animation:glowPulse 2.6s ease-in-out infinite"></span><span style="flex:1;height:64%;background:#3A3A36"></span><span style="flex:1;height:40%;background:#3A3A36"></span><span style="flex:1;height:70%;background:#3A3A36"></span><span style="flex:1;height:52%;background:#3A3A36"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="margin:20px 0 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6B6B6B">Scroll to explore ↓</p>
+</section>
+
+<nav aria-label="Case study sections" style="position:sticky;top:64px;z-index:90;background:rgba(245,244,240,.92);backdrop-filter:blur(10px);border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;gap:22px;overflow-x:auto;height:52px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11.5px">
+    <a href="#overview" data-sec="overview" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Overview</a>
+    <a href="#challenge" data-sec="challenge" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Challenge</a>
+    <a href="#research" data-sec="research" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Research</a>
+    <a href="#process" data-sec="process" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Process</a>
+    <a href="#design" data-sec="design" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Design</a>
+    <a href="#outcome" data-sec="outcome" style="color:#6B6B6B;white-space:nowrap;padding:6px 12px;transition:background .2s,color .2s" style-hover="color:#111">Outcome</a>
+    <a href="https://xd.adobe.com/view/9fcbcd0f-ecd9-4beb-9d63-b5808d1ed57a-ca98/" target="_blank" rel="noopener" style="margin-left:auto;flex:none;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:10px 16px;background:#A6381F;border:1px solid #A6381F;color:#F5F4F0" style-hover="background:#111;border-color:#111;color:#F5F4F0">View on Adobe XD ↗</a>
+  </div>
+</nav>
+
+<section id="overview" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px);display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,2fr);gap:clamp(32px,5vw,72px)">
+  <div>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">01 — Overview</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0;max-width:20ch">Operational software, judged by how fast a shift ends</h2>
+  </div>
+  <div>
+    <p style="font-size:17.5px;line-height:1.75;margin:0 0 16px">Complex healthcare workflows were transformed into clearer operational experiences: dashboard, patient management, care tasks, scheduling, field routes, notifications and a companion mobile application.</p>
+    <p style="font-size:17.5px;line-height:1.75;color:#6B6B6B;margin:0">Users were not shopping. They were repeating the same twenty actions all day, and every extra click was multiplied by a caseload.</p>
+  </div>
+
+  <div style="grid-column:1/-1;border-top:1px solid #D9D8D3;padding-top:clamp(28px,4vw,44px);margin-top:clamp(12px,2vw,20px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 20px">Designed for</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(18px,2.5vw,28px)">
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Nadia, 34</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Care coordinator</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> see what is late, what is next, and who needs her, in one glance at the start of a shift.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> patients, tasks, schedules and routes spread across disconnected screens.</p>
+    </div>
+    <div style="border:1px solid #D9D8D3;padding:22px;background:#fff">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F;margin:0 0 8px">Persona</p>
+      <h3 style="font-weight:800;font-size:19px;margin:0 0 4px;letter-spacing:-.01em">Tomás, 29</h3>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin:0 0 14px">Field nurse</p>
+      <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#111"><strong>Goal —</strong> get his next visit, patient notes and an outcome log on his phone between stops.</p>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#6B6B6B"><strong>Frustration —</strong> operational software built for a desk, not a moving day.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="challenge" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">02 — Challenge</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:26ch">Four jobs, four disconnected screens, one shift</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3">
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Context</p><p style="margin:0;font-size:15.5px;line-height:1.7">Patient history lived one place, today's tasks another. Coordinators rebuilt context by memory.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Priority</p><p style="margin:0;font-size:15.5px;line-height:1.7">Nothing distinguished an urgent task from a routine one until it was overdue.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Scheduling</p><p style="margin:0;font-size:15.5px;line-height:1.7">Schedule and route were planned separately, so travel time was invisible until the day started.</p></div>
+      <div style="background:#fff;padding:26px"><p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B;margin:0 0 12px">Field use</p><p style="margin:0;font-size:15.5px;line-height:1.7">Staff on the road were handed a desktop layout shrunk onto a phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">03 — Research &amp; workflow mapping</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:22ch">I mapped the shift before I mapped the screens</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);align-items:start">
+    <ol style="margin:0;padding:0;list-style:none">
+      <li style="border-top:1px solid #111;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">01</span><p style="margin:0;font-size:16.5px;line-height:1.7">The day starts with triage, not browsing. The landing screen had to answer "what needs me first".</p></li>
+      <li style="border-top:1px solid #D9D8D3;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">02</span><p style="margin:0;font-size:16.5px;line-height:1.7">Most task updates are one field. They did not deserve a full-page form.</p></li>
+      <li style="border-top:1px solid #D9D8D3;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">03</span><p style="margin:0;font-size:16.5px;line-height:1.7">Scheduling decisions are geographic. A route view had to sit beside the calendar.</p></li>
+      <li style="border-top:1px solid #D9D8D3;border-bottom:1px solid #D9D8D3;padding:22px 0;display:flex;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A6381F;flex:none;width:24px">04</span><p style="margin:0;font-size:16.5px;line-height:1.7">Field staff needed three things on mobile: next visit, patient notes, and a way to log the outcome.</p></li>
+    </ol>
+    <blockquote style="margin:0;background:#111;color:#F5F4F0;padding:clamp(28px,4vw,44px)">
+      <p style="margin:0 0 16px;font-weight:700;font-size:clamp(21px,2.4vw,30px);line-height:1.3;letter-spacing:-.02em">“Tell me what is late, what is next, and who I am seeing. Everything else can wait.”</p>
+      <footer style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85">Workflow interview</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="process" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">04 — Architecture &amp; wireframes</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">One spine: today, patients, schedule, routes</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:clamp(32px,4vw,52px)">
+      <div style="flex:1 1 160px;border:1px solid #A6381F;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A6381F">Level 01</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Today</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Triage: late, next, escalations</p></div>
+      <div style="flex:1 1 160px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">Level 02</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Patients</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Record, history, care plan</p></div>
+      <div style="flex:1 1 160px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">Level 02</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Schedule</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Calendar with capacity</p></div>
+      <div style="flex:1 1 160px;border:1px solid #D9D8D3;padding:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#6B6B6B">Level 02</span><p style="margin:10px 0 0;font-weight:700;font-size:16px">Routes</p><p style="margin:6px 0 0;font-size:14px;color:#6B6B6B;line-height:1.6">Geography and travel time</p></div>
+    </div>
+    <figure style="margin:0">
+      <div style="background:#F5F4F0;border:1px solid #D9D8D3;padding:clamp(16px,2.4vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+        <div style="background:#fff;border:1px solid #D9D8D3;padding:16px;display:flex;flex-direction:column;gap:9px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Care task list</span><span style="height:8px;width:80%;background:#D9D8D3"></span><span style="height:8px;width:66%;background:#D9D8D3"></span><span style="height:8px;width:74%;background:#A6381F"></span><span style="height:8px;width:58%;background:#D9D8D3"></span></div>
+        <div style="background:#fff;border:1px solid #D9D8D3;padding:16px;display:flex;flex-direction:column;gap:9px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Patient record</span><span style="height:44px;background:#F5F4F0"></span><span style="height:8px;width:70%;background:#D9D8D3"></span><span style="height:8px;width:52%;background:#D9D8D3"></span></div>
+        <div style="background:#fff;border:1px solid #D9D8D3;padding:16px;display:flex;flex-direction:column;gap:9px"><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#6B6B6B">Route plan</span><div style="height:70px;background:#F5F4F0;position:relative"><span style="position:absolute;left:12%;top:60%;width:9px;height:9px;background:#111;border-radius:50%"></span><span style="position:absolute;left:44%;top:30%;width:9px;height:9px;background:#111;border-radius:50%"></span><span style="position:absolute;left:76%;top:64%;width:9px;height:9px;background:#A6381F;border-radius:50%"></span></div><span style="height:8px;width:62%;background:#D9D8D3"></span></div>
+      </div>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">Mid-fidelity wireframes: task list, patient record, route plan.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="design" class="rv" style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">05 — Final interface</p>
+  <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:22ch">Dense where it helps, quiet everywhere else</h2>
+  <figure style="margin:0 0 clamp(40px,5vw,72px)">
+    <div style="background:#fff;border:1px solid #D9D8D3;padding:clamp(16px,2.4vw,34px);display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid #D9D8D3;padding-bottom:14px">
+        <span style="font-weight:700;font-size:17px">Today</span>
+        <div style="display:flex;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:8px 12px;background:#111;color:#F5F4F0">Late</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:8px 12px;border:1px solid #D9D8D3;color:#6B6B6B">Due</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:8px 12px;border:1px solid #D9D8D3;color:#6B6B6B">Done</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid #D9D8D3"><span style="width:4px;height:34px;background:#A6381F;flex:none"></span><span style="width:34px;height:34px;background:#F5F4F0;border:1px solid #D9D8D3;flex:none"></span><span style="height:8px;flex:1;background:#D9D8D3"></span><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#A6381F">Overdue</span><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B6B6B">09:30</span></div>
+      <div style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid #D9D8D3"><span style="width:4px;height:34px;background:#D9D8D3;flex:none"></span><span style="width:34px;height:34px;background:#F5F4F0;border:1px solid #D9D8D3;flex:none"></span><span style="height:8px;flex:1;background:#D9D8D3"></span><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B6B6B">Scheduled</span><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B6B6B">11:15</span></div>
+      <div style="display:flex;align-items:center;gap:16px;padding:14px 0"><span style="width:4px;height:34px;background:#D9D8D3;flex:none"></span><span style="width:34px;height:34px;background:#F5F4F0;border:1px solid #D9D8D3;flex:none"></span><span style="height:8px;flex:1;background:#D9D8D3"></span><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B6B6B">Scheduled</span><span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6B6B6B">14:00</span></div>
+    </div>
+    <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">01–03 — Dashboard triage and care task workflow. Status is carried by a rule, a label and a time, never colour alone.</figcaption>
+  </figure>
+  <figure style="margin:0">
+    <div style="background:#fff;border:1px solid #D9D8D3;padding:clamp(16px,2.5vw,36px);display:flex;gap:clamp(16px,3vw,40px);flex-wrap:wrap;justify-content:center">
+      <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#F5F4F0">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#A6381F">Next visit</span>
+          <span style="height:10px;width:70%;background:#111"></span>
+          <span style="height:60px;background:#fff;border:1px solid #D9D8D3"></span>
+          <span style="height:7px;width:84%;background:#D9D8D3"></span>
+          <span style="height:7px;width:62%;background:#D9D8D3"></span>
+          <span style="height:46px;background:#111;margin-top:6px"></span>
+        </div>
+      </div>
+      <div style="width:250px;max-width:100%;border:8px solid #111;border-radius:26px;overflow:hidden;background:#F5F4F0">
+        <div style="height:22px;background:#111"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6B6B6B">Log outcome</span>
+          <span style="height:34px;background:#fff;border:1px solid #D9D8D3"></span>
+          <span style="height:34px;background:#fff;border:1px solid #D9D8D3"></span>
+          <span style="height:70px;background:#fff;border:1px solid #D9D8D3"></span>
+          <span style="height:46px;background:#111;margin-top:6px"></span>
+        </div>
+      </div>
+    </div>
+    <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B6B6B;margin-top:12px">06 — Mobile application: next visit and outcome logging, built for one hand and poor signal.</figcaption>
+  </figure>
+</section>
+
+<section id="outcome" class="rv" style="background:#fff;border-block:1px solid #D9D8D3">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(56px,7vw,100px) clamp(20px,4vw,40px)">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A6381F;margin:0 0 14px">06 — Outcome &amp; learnings</p>
+    <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);line-height:1.04;letter-spacing:-.028em;margin:0 0 clamp(32px,4vw,52px);max-width:24ch">Fewer screens per task</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#D9D8D3;border:1px solid #D9D8D3;margin-bottom:clamp(32px,4vw,52px)">
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Task completion</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">Coordinators cleared their task list without switching between screens.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Steps to update a task</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">Updating a task went from a multi-field form to a single tap.</p></div>
+      <div style="background:#F5F4F0;padding:26px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A6381F">Mobile adoption in the field</span><p style="margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#111">Field staff started logging visits from the app instead of calling them in.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px)">
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What worked</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">Designing the triage screen first gave every later decision a test: does this help someone start their shift faster?</p></div>
+      <div><h3 style="font-weight:700;font-size:20px;margin:0 0 12px;letter-spacing:-.01em">What I would change</h3><p style="margin:0;font-size:16.5px;line-height:1.75;color:#6B6B6B">I documented the component states after the first build rather than before it, which cost a round of rework with engineering.</p></div>
+    </div>
+  </div>
+</section>
+
+<nav aria-label="Case study navigation" style="background:#111;color:#F5F4F0">
+  <div style="max-width:1520px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:center">
+    <a href="../index.html#work" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#B5B5AF" style-hover="color:#F5F4F0">← Back to Work</a>
+    <a href="nrdb-app.dc.html" style="justify-self:end;text-align:right;color:#F5F4F0" style-hover="color:#C8633F">
+      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85;margin-bottom:8px">Next project</span>
+      <span style="display:block;font-weight:800;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em">NRDB: Mobile Flow for Nurses →</span>
+    </a>
+  </div>
+</nav>
+</article>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  barRef = React.createRef();
+  componentDidMount() {
+    this.p = 0;
+    this.onScroll = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const p = h > 0 ? Math.min(100, Math.round((window.scrollY / h) * 100)) : 0;
+      if (p === this.p) return;
+      this.p = p;
+      if (this.barRef.current) this.barRef.current.style.width = p + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+      this.io = io;
+    } else {
+      document.querySelectorAll('.rv').forEach((el) => el.classList.add('in'));
+    }
+    this.secLinks = Array.from(document.querySelectorAll('nav[aria-label="Case study sections"] a[data-sec]'));
+    if (this.secLinks.length) {
+      const setActive = (id) => {
+        this.secLinks.forEach((a) => {
+          const on = a.dataset.sec === id;
+          a.style.background = on ? '#A6381F' : 'transparent';
+          a.style.color = on ? '#F5F4F0' : '#6B6B6B';
+        });
+      };
+      this.visibleSecIds = new Set();
+      const updateActive = () => {
+        const order = this.secLinks.map((a) => a.dataset.sec);
+        for (let i = order.length - 1; i >= 0; i--) {
+          if (this.visibleSecIds.has(order[i])) { setActive(order[i]); return; }
+        }
+      };
+      const secIO = new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) this.visibleSecIds.add(e.target.id); else this.visibleSecIds.delete(e.target.id); });
+        updateActive();
+      }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
+      this.secLinks.forEach((a) => { const sec = document.getElementById(a.dataset.sec); if (sec) secIO.observe(sec); });
+      this.secIO = secIO;
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); if (this.io) this.io.disconnect(); if (this.secIO) this.secIO.disconnect(); }
+  renderVals() { return { barRef: this.barRef }; }
+}
+</script>
+</body>
+</html>
